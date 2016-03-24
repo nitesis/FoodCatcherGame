@@ -21,6 +21,11 @@ public class SphereController : MonoBehaviour {
 				other.gameObject.GetComponent<AudioSource>().Play();
 			}
 		}
+
+		if (other.CompareTag("food"))
+        {
+            Destroy(other.gameObject);
+        }
 	}
 	
 	
