@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+
 public class MazeGenerator : MonoBehaviour
 {
 
@@ -16,8 +17,10 @@ public class MazeGenerator : MonoBehaviour
 	private List<Vector3> pathMazes = new List<Vector3> ();
 	private Stack<Vector2> _tiletoTry = new Stack<Vector2> ();
 	private List<Vector2> offsets = new List<Vector2> { new Vector2(0, 1), new Vector2(0, -1), new Vector2(1, 0), new Vector2(-1, 0) };
+    public GameObject spawnObject;
 
-	private System.Random rnd = new System.Random ();
+
+    private System.Random rnd = new System.Random ();
 
 	private int _width, _height;
 	private Vector2 _currentTile;
@@ -67,6 +70,10 @@ public class MazeGenerator : MonoBehaviour
 		Maze = CreateMaze ();  // generate the maze in Maze Array.
 
 		GameObject ptype = null;
+        GameObject food=null;
+        int n = 50;
+        int counter = 3;
+        System.Random random = new System.Random();
 
 		float startX = -Maze.GetUpperBound (0) / 2;
 		float startZ = -Maze.GetUpperBound (1) / 2;
@@ -85,7 +92,17 @@ public class MazeGenerator : MonoBehaviour
 				} else if (Maze [i, j] == 0) {
 					MazeString = MazeString + "0"; // added to create String
 					pathMazes.Add (new Vector3 (i, 0, j));
-				}
+                    
+                    if ( n%2==0)
+                    {
+                        food = Instantiate(spawnObject) as GameObject;
+                        food.transform.position = new Vector3(i * ptype.transform.localScale.x + startX+0.5f, 0.5f, j * ptype.transform.localScale.z + startZ+0.5f);
+                        
+                    }
+                    n-=random.Next(1,5);
+                   
+
+                }
 			}
 			MazeString = MazeString + "\n";  // added to create String
 		}
