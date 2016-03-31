@@ -4751,6 +4751,7 @@ MonoBehaviour:
   height: 7
   brick: {fileID: 2100000, guid: 63d9e5093282943c9b27ba6793dc0980, type: 2}
   MazeString: 
+  spawnObject: {fileID: 1196234247}
 --- !u!4 &316012588
 Transform:
   m_ObjectHideFlags: 0
@@ -26873,7 +26874,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1900847836}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 25147e358e02e444fab02c317047500d, type: 2}
   m_CullingMode: 0
