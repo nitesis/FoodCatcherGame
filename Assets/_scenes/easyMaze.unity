@@ -4751,6 +4751,7 @@ MonoBehaviour:
   height: 7
   brick: {fileID: 2100000, guid: 63d9e5093282943c9b27ba6793dc0980, type: 2}
   MazeString: 
+  spawnObject: {fileID: 0}
 --- !u!4 &316012588
 Transform:
   m_ObjectHideFlags: 0

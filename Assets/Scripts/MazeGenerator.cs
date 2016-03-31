@@ -71,8 +71,7 @@ public class MazeGenerator : MonoBehaviour
 
 		GameObject ptype = null;
         GameObject food=null;
-        int n = 50;
-        int counter = 3;
+        int n = 3*width;
         System.Random random = new System.Random();
 
 		float startX = -Maze.GetUpperBound (0) / 2;
