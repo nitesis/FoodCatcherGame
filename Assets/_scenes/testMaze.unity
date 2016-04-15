@@ -4729,6 +4729,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 316012588}
   - 114: {fileID: 316012587}
+  - 114: {fileID: 316012589}
   m_Layer: 0
   m_Name: MazeGenerator
   m_TagString: Untagged
@@ -4751,7 +4752,16 @@ MonoBehaviour:
   height: 7
   brick: {fileID: 2100000, guid: 63d9e5093282943c9b27ba6793dc0980, type: 2}
   MazeString: 
+  pathMazes: []
+  offsets:
+  - {x: 0, y: 1}
+  - {x: 0, y: -1}
+  - {x: 1, y: 0}
+  - {x: -1, y: 0}
   spawnObject: {fileID: 110818, guid: 91076f6c375712a43805ed5e8b9f5c19, type: 2}
+  _width: 0
+  _height: 0
+  _currentTile: {x: 0, y: 0}
 --- !u!4 &316012588
 Transform:
   m_ObjectHideFlags: 0
@@ -4764,6 +4774,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &316012589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316012586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26e5b19f84b47242afe224b67ae4e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 0
+  height: 0
+  brick: {fileID: 0}
+  MazeString: 
+  spawnObject: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &316565697
 GameObject:
   m_ObjectHideFlags: 0
