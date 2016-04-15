@@ -17,7 +17,7 @@ public class FoodObjectController : MonoBehaviour
 
     void Start()
     {
-        maze = mazeGenerator.MakeBlocks();
+        maze = mazeGenerator.GetMaze();
         emptyPositions = currentEmptyTiles;
         var maxObjects = System.Math.Min(emptyPositions.Count, prefabCount);
         for (int i = 0; i < maxObjects; i++)

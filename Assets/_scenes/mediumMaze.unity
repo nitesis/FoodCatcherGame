@@ -231,6 +231,7 @@ GameObject:
   - 4: {fileID: 316012588}
   - 114: {fileID: 316012587}
   - 114: {fileID: 316012590}
+  - 114: {fileID: 316012589}
   m_Layer: 0
   m_Name: MazeGenerator
   m_TagString: Untagged
@@ -265,6 +266,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!114 &316012589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316012586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893cc8f2fa6bf7c42953d576b6627578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeGenerator: {fileID: 316012587}
+  fallDelay: 1
+  fallBlockActive: 1
 --- !u!114 &316012590
 MonoBehaviour:
   m_ObjectHideFlags: 0

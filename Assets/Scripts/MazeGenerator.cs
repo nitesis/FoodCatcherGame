@@ -29,6 +29,22 @@ public class MazeGenerator : MonoBehaviour
     private System.Random rnd = new System.Random();
     private int _width, _height;
     private Vector2 _currentTile;
+    private GameObject[,] _mazeObjects;
+
+    void Start()
+    {
+        _mazeObjects = MakeBlocks();
+    }
+
+    public GameObject[,] GetMaze()
+    {
+        return _mazeObjects;
+    }
+
+    public int[,] GetMazeLogik()
+    {
+        return Maze;
+    }
 
     public GameObject[,] MakeBlocks()
     {
@@ -46,10 +62,6 @@ public class MazeGenerator : MonoBehaviour
 
         GameObject ptype = null;
         GameObject sphere = null;
-
-
-        float startX = -Maze.GetUpperBound(0) / 2;
-        float startZ = -Maze.GetUpperBound(1) / 2;
 
 
         for (int i = 0; i <= Maze.GetUpperBound(0); i++)
