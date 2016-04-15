@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class MazeBlockController : MonoBehaviour {
 
     public MazeGenerator mazeGenerator;
-    public float fallDelay = 1;
+    public float fallDelay ;
     public bool fallBlockActive;
 
     private GameObject[,] maze;
@@ -14,19 +14,42 @@ public class MazeBlockController : MonoBehaviour {
     private List<Position> fallPossibleBlocks;
     private GameObject appear;
     private System.Random random = new System.Random();
+    
 
-   
+    private float timeFall=3;
+    private float timeAppear = 6;
+
+   void FixedUpdate()
+    {
+        if (fallBlockActive)
+        {
+
+            if (Time.timeSinceLevelLoad == timeFall)
+            {
+                var position = randomBlockPosition();
+                fallBlock(position);
+                timeFall = timeFall + 2 * fallDelay;
+            }
+
+            if (Time.timeSinceLevelLoad == timeAppear && appear != null)
+            {
+
+                riseUp(appear);
+                timeAppear = timeAppear + 2 * fallDelay;
+            }
+        }
+    }
+  
 
     void Start()
     {
+        timeFall = fallDelay;
+        timeAppear = 2 * fallDelay;
         maze = mazeGenerator.GetMaze();
         mazeLogic = mazeGenerator.GetMazeLogik();
         fallPossibleBlocks = FallPossibleBlocks();
-        if (fallBlockActive)
-           StartCoroutine(doFall());
-    
 
-    }
+     }
 
     private List<Position> FallPossibleBlocks()
     {
@@ -45,44 +68,23 @@ public class MazeBlockController : MonoBehaviour {
 
     public bool CheckPossibility(int i, int j)
     {
-        bool possibleRow = mazeLogic[i - 1, j]==1 && mazeLogic[i+1,j]==1;
-        bool possibleColomn = mazeLogic[i, j+1] == 1 && mazeLogic[i, j-1] == 1;
+        bool possibleRow = mazeLogic[i - 1, j]==1 && mazeLogic[i+1,j]==1 && mazeLogic[i,j+1]!=1 && mazeLogic[i, j- 1] != 1;
+        bool possibleColomn = mazeLogic[i, j+1] == 1 && mazeLogic[i, j-1] == 1 && mazeLogic[i+1,j] != 1 && mazeLogic[i-1, j] != 1;
         return possibleColomn ||possibleRow;
     }
-
-    private IEnumerator doFall()
-    {
-        while (fallBlockActive)
-        {
-            yield return new WaitForSeconds(fallDelay);
-            var position = randomBlockPosition();
-            fallBlock(position);
-
-        }
-    }
-
-    private IEnumerator doRise()
-    {
-        while (fallBlockActive)
-        {
-            yield return new WaitForSeconds(fallDelay);
-            riseUp(appear);
-        }
-    }
-
 
 
     private void fallBlock(Position pos)
     {
         GameObject block = maze[pos.x, pos.y];
-        block.transform.position = new Vector3(block.transform.position.x, -5.0f, block.transform.position.x);
-        appear = block;
-       // StartCoroutine(doRise());
+        block.transform.position = new Vector3(block.transform.position.x, -5.0f, block.transform.position.z);
+        appear = maze[pos.x, pos.y];
+
     }
 
     private void riseUp(GameObject block)
     {
-                block.transform.position = new Vector3(block.transform.position.x, 0.7f, block.transform.position.x);
+          block.transform.position = new Vector3(block.transform.position.x, 0.7f, block.transform.position.z);
     }
 
     private Position randomBlockPosition()
@@ -92,10 +94,7 @@ public class MazeBlockController : MonoBehaviour {
         
     }
 
-    // Update is called once per frame
-    void Update () {
-	
-	}
+ 
 
     public class Position
     {
