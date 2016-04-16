@@ -294,8 +294,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
-  fallDelay: 3
-  fallBlockActive: 0
+  fallDelay: 1
+  fallBlockActive: 1
 --- !u!1 &542542941
 GameObject:
   m_ObjectHideFlags: 0
