@@ -8,8 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_scenes/menu.unity
   - enabled: 1
-    path: Assets/_scenes/easyMaze_beta.unity
-  - enabled: 1
     path: Assets/_scenes/mediumMaze.unity
   - enabled: 1
     path: Assets/_scenes/hardMaze.unity
