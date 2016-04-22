@@ -30,11 +30,16 @@ public class MazeGenerator : MonoBehaviour
     private int _width, _height;
     private Vector2 _currentTile;
     private GameObject[,] _mazeObjects;
+    private GameObject firstPlayer;
+    private GameObject secondPlayer;
+    //========================================================================
 
     void Start()
     {
         _mazeObjects = MakeBlocks();
+
     }
+    //====================================================================
 
     public GameObject[,] GetMaze()
     {
@@ -45,6 +50,18 @@ public class MazeGenerator : MonoBehaviour
     {
         return Maze;
     }
+
+    public GameObject GetFirstPlayer()
+    {
+        return firstPlayer;
+    }
+
+    public GameObject GetsecondPlayer()
+    {
+        return secondPlayer;
+    }
+
+    //=================================================================================
 
     public GameObject[,] MakeBlocks()
     {
@@ -61,19 +78,21 @@ public class MazeGenerator : MonoBehaviour
         Maze[width - 2, height - 2] = 3;
 
         GameObject ptype = null;
-        GameObject sphere = null;
+
+        firstPlayer = Instantiate(player) as GameObject;
+        firstPlayer.transform.position = new Vector3(1, 0.5f, 1);
+        ret[1, 1] = firstPlayer;
+
+        secondPlayer = Instantiate(player) as GameObject;
+        secondPlayer.transform.position = new Vector3(width - 2, 0.5f, height - 2);
+        ret[width - 2, height - 2] = secondPlayer;
 
 
         for (int i = 0; i <= Maze.GetUpperBound(0); i++)
         {
             for (int j = 0; j <= Maze.GetUpperBound(1); j++)
             {
-                if ((i == width - 2 && j == height - 2) || (i == 1 && j == 1))
-                {
-                    sphere = Instantiate(player) as GameObject;
-                    sphere.transform.position = new Vector3(i, 0.5f, j );
-                    ret[i, j] = sphere;
-                }
+
                 if (Maze[i, j] == 1)
                 {
                     MazeString = MazeString + "X";  // added to create String

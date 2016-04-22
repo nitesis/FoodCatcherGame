@@ -14,16 +14,67 @@ public class FoodObjectController : MonoBehaviour
     private List<ObjectContainer> objects = new List<ObjectContainer>();
     private List<Position> emptyPositions;
     private System.Random random = new System.Random();
+    private GameObject fleeObject1;
+    private GameObject fleeObject2;
 
     void Start()
     {
         maze = mazeGenerator.GetMaze();
         emptyPositions = currentEmptyTiles;
-        var maxObjects = System.Math.Min(emptyPositions.Count, prefabCount);
+        // Create Fleeing Objects
+        fleeObject1=PlaceFleeObject(RandomPosFleeObject());
+        fleeObject2=PlaceFleeObject(RandomPosFleeObject());
+        // Create hiding and appearing Objects
+        var maxObjects = System.Math.Min(emptyPositions.Count, prefabCount-2);
         for (int i = 0; i < maxObjects; i++)
             spawnRandom(spawnPrefab);
         if (rearrangeObjects)
             StartCoroutine(rearrange());
+    }
+
+    //==================================================================
+    //Methods used for fleeing objects
+    private Position RandomPosFleeObject()
+    {
+        Position pos = null;
+        if (emptyPositions != null)
+        {
+            bool posOK = false;
+            int rndmIndex;   
+            while (!posOK)
+            {
+                rndmIndex = random.Next(0, emptyPositions.Count-1);
+                pos = emptyPositions[rndmIndex];
+                if (pos.x > 2 && pos.y > 2)
+                {
+                    if (CountNullarraound(pos) >= 2)
+                        posOK = true;
+                }
+            }  
+        }
+        return pos;
+    }
+
+
+    private int CountNullarraound(Position position)
+    {
+        int count = 0;
+        if(maze[position.x-1,position.y]==null)
+            count++;
+        if (maze[position.x +1, position.y] == null)
+            count++;
+        if (maze[position.x, position.y-1] == null)
+            count++;
+        if (maze[position.x, position.y +1] == null)
+            count++;
+        return count;
+    }
+
+    private GameObject PlaceFleeObject(Position pos)
+    {
+        maze[pos.x, pos.y] = Instantiate(spawnPrefab) as GameObject;
+        maze[pos.x, pos.y].transform.position = new Vector3(pos.x, 0.5f, pos.y);
+        return maze[pos.x, pos.y];
     }
 
     private List<Position> currentEmptyTiles {
@@ -36,6 +87,9 @@ public class FoodObjectController : MonoBehaviour
             return emptyTiles;
         }
     }
+
+    //===========================================================================================
+    //Methods used for hiding and appearing objects
 
     public ObjectContainer spawnRandom(GameObject prefab)
     {
@@ -116,6 +170,8 @@ public class FoodObjectController : MonoBehaviour
         oldPosition.y = y;
     }
 
+    //======================================================================================
+    // inner classes 
     public class ObjectContainer
     {
         public GameObject obj;
