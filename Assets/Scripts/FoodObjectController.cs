@@ -16,13 +16,17 @@ public class FoodObjectController : MonoBehaviour
     private System.Random random = new System.Random();
     private GameObject fleeObject1;
     private GameObject fleeObject2;
+    private GameObject player1;
+    private GameObject player2;
 
     void Start()
     {
         maze = mazeGenerator.GetMaze();
         emptyPositions = currentEmptyTiles;
+        player1 = mazeGenerator.GetFirstPlayer();
+        player2 = mazeGenerator.GetsecondPlayer();
         // Create Fleeing Objects
-        fleeObject1=PlaceFleeObject(RandomPosFleeObject());
+        fleeObject1 =PlaceFleeObject(RandomPosFleeObject());
         fleeObject2=PlaceFleeObject(RandomPosFleeObject());
         // Create hiding and appearing Objects
         var maxObjects = System.Math.Min(emptyPositions.Count, prefabCount-2);
@@ -32,8 +36,40 @@ public class FoodObjectController : MonoBehaviour
             StartCoroutine(rearrange());
     }
 
+    void FixedUpdate()
+    {
+        moveFleeObject(fleeObject1);
+        moveFleeObject(fleeObject2);
+    }
+
     //==================================================================
     //Methods used for fleeing objects
+
+    private void moveFleeObject(GameObject obj)
+    {
+        Position posPlayar1 = new Position((int)player1.transform.position.x, (int)player1.transform.position.y);
+        Position posPlayaer2 = new Position((int)player2.transform.position.x, (int)player2.transform.position.y);
+        List<Position> sensList = sensorZoneFleeObject(obj);
+        if (sensList.Contains(posPlayar1) || sensList.Contains(posPlayaer2))
+        {
+            Destroy(obj.gameObject);
+        }
+
+        
+    }
+
+    private List<Position> sensorZoneFleeObject(GameObject obj)
+    {
+        List<Position> positions = new List<Position>();
+        Position posObj = new Position((int)obj.transform.position.x, (int)obj.transform.position.y);
+        positions.Add(new Position(posObj.x + 1, posObj.y));
+        positions.Add(new Position(posObj.x - 1, posObj.y));
+        positions.Add(new Position(posObj.x , posObj.y+1));
+        positions.Add(new Position(posObj.x, posObj.y-1));
+        return positions;
+    }
+
+
     private Position RandomPosFleeObject()
     {
         Position pos = null;
