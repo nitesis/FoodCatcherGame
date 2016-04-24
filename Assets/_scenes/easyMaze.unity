@@ -560,6 +560,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 316012588}
   - 114: {fileID: 316012589}
+  - 114: {fileID: 316012587}
+  - 114: {fileID: 316012590}
   m_Layer: 0
   m_Name: MazeGenerator
   m_TagString: Untagged
@@ -567,6 +569,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &316012587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316012586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a27197be71469454c81aa535324d8680, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeGenerator: {fileID: 316012589}
+  spawnPrefab: {fileID: 106838, guid: 58f34f13a6cbd2049b2ad64be6dda8d7, type: 2}
+  prefabCount: 10
+  rearrangeObjects: 0
+  rearrangeDelay: 1
 --- !u!4 &316012588
 Transform:
   m_ObjectHideFlags: 0
@@ -594,6 +612,20 @@ MonoBehaviour:
   height: 7
   brick: {fileID: 2100000, guid: 63d9e5093282943c9b27ba6793dc0980, type: 2}
   player: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+--- !u!114 &316012590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 316012586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893cc8f2fa6bf7c42953d576b6627578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazeGenerator: {fileID: 316012589}
+  fallDelay: 1
+  fallBlockActive: 1
 --- !u!1 &396114666
 GameObject:
   m_ObjectHideFlags: 0
