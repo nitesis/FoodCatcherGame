@@ -17,19 +17,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: 1.4941, y: 0, z: 0}
-        inSlope: {x: 70.70317, y: 0, z: 0}
-        outSlope: {x: 70.70317, y: 0, z: 0}
+        value: {x: 1.5, y: 0, z: 0}
+        inSlope: {x: 69.51889, y: 0, z: 0}
+        outSlope: {x: 69.51889, y: 0, z: 0}
         tangentMode: 0
-      - time: 0.98333335
+      - time: 1
         value: {x: 71.01889, y: 0, z: 0}
-        inSlope: {x: 44.67682, y: 0, z: 0}
-        outSlope: {x: 44.67682, y: 0, z: 0}
+        inSlope: {x: 44.25, y: 0, z: 0}
+        outSlope: {x: 44.25, y: 0, z: 0}
         tangentMode: 0
       - time: 2
-        value: {x: 89.980194, y: 0, z: 0}
-        inSlope: {x: 18.650463, y: 0, z: 0}
-        outSlope: {x: 18.650463, y: 0, z: 0}
+        value: {x: 90, y: 0, z: 0}
+        inSlope: {x: 18.98111, y: 0, z: 0}
+        outSlope: {x: 18.98111, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -69,7 +69,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 31
       - time: 2
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
@@ -202,19 +202,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 1.4941
-        inSlope: 70.70317
-        outSlope: 70.70317
+        value: 1.5
+        inSlope: 69.51889
+        outSlope: 69.51889
         tangentMode: 10
-      - time: 0.98333335
+      - time: 1
         value: 71.01889
-        inSlope: 44.67682
-        outSlope: 44.67682
+        inSlope: 44.25
+        outSlope: 44.25
         tangentMode: 10
       - time: 2
-        value: 89.980194
-        inSlope: 18.650463
-        outSlope: 18.650463
+        value: 90
+        inSlope: 18.98111
+        outSlope: 18.98111
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -272,7 +272,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 31
       - time: 2
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
