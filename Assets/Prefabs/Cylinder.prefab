@@ -11,6 +11,7 @@ GameObject:
   - 33: {fileID: 3321702}
   - 136: {fileID: 13602836}
   - 23: {fileID: 2370508}
+  - 135: {fileID: 13549084}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: food
@@ -63,6 +64,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141530}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!135 &13549084
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4964558
+  m_Center: {x: -1.6250001, y: 1.6250001, z: 1.4999999}
 --- !u!136 &13602836
 CapsuleCollider:
   m_ObjectHideFlags: 1
