@@ -15,6 +15,8 @@ public class FoodObjectController : MonoBehaviour
     private List<Position> emptyPositions;
     private System.Random random = new System.Random();
     private GameObject fleeObject1;
+    private Position posFleeObject1;
+    private Position posFleeObject2;
     private GameObject fleeObject2;
     private GameObject player1;
     private GameObject player2;
@@ -26,8 +28,10 @@ public class FoodObjectController : MonoBehaviour
         player1 = mazeGenerator.GetFirstPlayer();
         player2 = mazeGenerator.GetsecondPlayer();
         // Create Fleeing Objects
-        fleeObject1 =PlaceFleeObject(RandomPosFleeObject());
-        fleeObject2=PlaceFleeObject(RandomPosFleeObject());
+        posFleeObject1 = RandomPosFleeObject();
+        posFleeObject2 = RandomPosFleeObject();
+        fleeObject1 =PlaceFleeObject(posFleeObject1);
+        fleeObject2=PlaceFleeObject(posFleeObject2);
         // Create hiding and appearing Objects
         var maxObjects = System.Math.Min(emptyPositions.Count, prefabCount-2);
         for (int i = 0; i < maxObjects; i++)
@@ -37,36 +41,50 @@ public class FoodObjectController : MonoBehaviour
         
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(fleeObject1!=null)
-             moveFleeObject(fleeObject1);
+             moveFleeObject(fleeObject1, posFleeObject1);
 
-        if (fleeObject1 != null)
-            moveFleeObject(fleeObject2);
+        if (fleeObject2 != null)
+            moveFleeObject(fleeObject2, posFleeObject2);
     }
 
     //==================================================================
     //Methods used for fleeing objects
 
-    private void moveFleeObject(GameObject obj)
+    private void moveFleeObject(GameObject obj, Position pos)
     {
-        var distance = 2;
+        var distance = 1;
         
         if ((Vector3.Distance(player1.transform.position, obj.transform.position) < distance)
             || (Vector3.Distance(player2.transform.position, obj.transform.position) < distance))
         {
-            Destroy(obj.gameObject);
+            Position tempPos = null;
+            List<Position> positions = sensorZoneFleeObject(pos);
+            while (tempPos == null)
+            {
+                tempPos = positions[random.Next(0, 3)];
+            }
+
+            maze[tempPos.x, tempPos.y] = obj;
+            maze[pos.x, pos.y] = null;
+
+           // obj.transform.position = new Vector3(tempPos.x, obj.transform.position.y, tempPos.y);
+
+
+            // Destroy(obj.gameObject);
+           // obj.transform.position = new Vector3 (Mathf.Sin(Time.time * 3), obj.transform.position.y, obj.transform.position.z);
         }
+
        
 
         
     }
 
-    private List<Position> sensorZoneFleeObject(GameObject obj)
+    private List<Position> sensorZoneFleeObject(Position posObj)
     {
         List<Position> positions = new List<Position>();
-        Position posObj = new Position((int)obj.transform.position.x, (int)obj.transform.position.y);
         positions.Add(new Position(posObj.x + 1, posObj.y));
         positions.Add(new Position(posObj.x - 1, posObj.y));
         positions.Add(new Position(posObj.x , posObj.y+1));
