@@ -34,12 +34,16 @@ public class FoodObjectController : MonoBehaviour
             spawnRandom(spawnPrefab);
         if (rearrangeObjects)
             StartCoroutine(rearrange());
+        
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        moveFleeObject(fleeObject1);
-        moveFleeObject(fleeObject2);
+        if(fleeObject1!=null)
+             moveFleeObject(fleeObject1);
+
+        if (fleeObject1 != null)
+            moveFleeObject(fleeObject2);
     }
 
     //==================================================================
@@ -47,13 +51,14 @@ public class FoodObjectController : MonoBehaviour
 
     private void moveFleeObject(GameObject obj)
     {
-        Position posPlayar1 = new Position((int)player1.transform.position.x, (int)player1.transform.position.y);
-        Position posPlayaer2 = new Position((int)player2.transform.position.x, (int)player2.transform.position.y);
-        List<Position> sensList = sensorZoneFleeObject(obj);
-        if (sensList.Contains(posPlayar1) || sensList.Contains(posPlayaer2))
+        var distance = 2;
+        
+        if ((Vector3.Distance(player1.transform.position, obj.transform.position) < distance)
+            || (Vector3.Distance(player2.transform.position, obj.transform.position) < distance))
         {
             Destroy(obj.gameObject);
         }
+       
 
         
     }
