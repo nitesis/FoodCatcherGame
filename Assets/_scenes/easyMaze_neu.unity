@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d26e5b19f84b47242afe224b67ae4e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 11
+  width: 7
   height: 7
   brick: {fileID: 2100000, guid: 63d9e5093282943c9b27ba6793dc0980, type: 2}
   player: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
   spawnPrefab: {fileID: 106838, guid: 58f34f13a6cbd2049b2ad64be6dda8d7, type: 2}
-  prefabCount: 10
+  prefabCount: 5
   rearrangeObjects: 1
   rearrangeDelay: 0.3
 --- !u!1 &335966994
@@ -522,7 +522,7 @@ GameObject:
   - 114: {fileID: 390429023}
   - 114: {fileID: 390429022}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas_ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

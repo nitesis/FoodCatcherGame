@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
-  spawnPrefab: {fileID: 106838, guid: 58f34f13a6cbd2049b2ad64be6dda8d7, type: 2}
+  spawnPrefab: {fileID: 141530, guid: c7af1076e3a434d53a9e18cf2c6fbfea, type: 2}
   prefabCount: 10
   rearrangeObjects: 1
   rearrangeDelay: 0.3
@@ -914,7 +914,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 20
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
