@@ -8,6 +8,10 @@ public class MenuController : MonoBehaviour {
 		LoadScene ("menu");
 	}
 
+	public void MenuRecipeMedium() {
+		LoadScene ("menuRecipeMedium");
+	}
+
 	public void EasyMaze() {
 		LoadScene("easyMaze");
 	}
