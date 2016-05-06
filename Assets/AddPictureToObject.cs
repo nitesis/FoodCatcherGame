@@ -10,11 +10,12 @@ public class AddPictureToObject : MonoBehaviour {
 	private Material material;
 	private Texture2D oldTexture;
 	private Texture2D newTexture;
+	public string foodPictureName;
 
 	// Use this for initialization
 	void Start () {
 		rend = GetComponent<Renderer>();
-		rend.material.mainTexture = Resources.Load("spiegelei") as Texture;
+		rend.material.mainTexture = Resources.Load(foodPictureName) as Texture;
 		var texture = rend.material.mainTexture;
 		Shader.EnableKeyword("_ALPHATEST_ON");
 	}
