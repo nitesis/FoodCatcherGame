@@ -26,27 +26,31 @@ public class FoodObjectController : MonoBehaviour
         emptyPositions = currentEmptyTiles;
         player1 = mazeGenerator.GetFirstPlayer();
         player2 = mazeGenerator.GetsecondPlayer();
+
         // Create Fleeing Objects
         posFleeObject1 = RandomPosFleeObject();
         posFleeObject2 = RandomPosFleeObject();
         fleeObject1 =PlaceFleeObject(posFleeObject1);
         fleeObject2=PlaceFleeObject(posFleeObject2);
+
         // Create hiding and appearing Objects
         var maxObjects = System.Math.Min(emptyPositions.Count, prefabCount-2);
         for (int i = 0; i < maxObjects; i++)
             spawnRandom(spawnPrefab);
         if (rearrangeObjects)
             StartCoroutine(rearrange());
-        
+
+       
+
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if(fleeObject1!=null)
-             moveFleeObject(fleeObject1, posFleeObject1);
+            moveFleeObject(fleeObject1, posFleeObject1);
 
         if (fleeObject2 != null)
-            moveFleeObject(fleeObject2, posFleeObject2);
+          moveFleeObject(fleeObject2, posFleeObject2);
     }
 
     //==================================================================
@@ -63,38 +67,37 @@ public class FoodObjectController : MonoBehaviour
             List<Position> positions = sensorZoneFleeObject(pos);
             bool allBusy = true;
             int listIndex=0;
-            while(allBusy==true && listIndex < 4 )
+            while(allBusy==true && listIndex <4 )
             {
                 if (maze[positions[listIndex].x, positions[listIndex].y]==null)
                 {
                     allBusy = false;
+                    tempPos = positions[listIndex];
+
                 }
                 listIndex++;
             }
 
             if (!allBusy)
             {
-                while (tempPos == null)
+               /* while (tempPos == null)
                 {
                     int n = random.Next(0, 3);
                     if (maze[positions[n].x, positions[n].y] == null)
                     {
                         tempPos = positions[n];
                     }
-                }
+                }*/
 
                 // maze[tempPos.x, tempPos.y] = obj;
                 //maze[pos.x, pos.y] = null;
 
-                 obj.transform.position = new Vector3(tempPos.x, obj.transform.position.y, tempPos.y);
+                 obj.transform.position = new Vector3(tempPos.x, 0, tempPos.y);
+                 maze[tempPos.x, tempPos.y] = obj;
                 if (obj == fleeObject1)
                     posFleeObject1 = tempPos;
                 else
                     posFleeObject2 = tempPos;
-
-
-                // Destroy(obj.gameObject);
-                // obj.transform.position = new Vector3 (Mathf.Sin(Time.time * 3), obj.transform.position.y, obj.transform.position.z);
             }
         }
 
