@@ -3,7 +3,6 @@ using System.Collections;
 
 public class AddPictureToObject : MonoBehaviour {
 
-	//public ArrayList spawnObjects;
 	public Renderer rend;
 	public Texture[] textures;
 	private Shader shad;
@@ -11,26 +10,18 @@ public class AddPictureToObject : MonoBehaviour {
 	private Material material;
 	private Texture2D oldTexture;
 	private Texture2D newTexture;
+	public string foodPictureName;
 
 	// Use this for initialization
 	void Start () {
-//		var go = GameObject.FindGameObjectWithTag("food");
-//		var rend = go.GetComponent<Renderer>();
 		rend = GetComponent<Renderer>();
-		rend.material.mainTexture = Resources.Load("spiegelei") as Texture;
+		rend.material.mainTexture = Resources.Load(foodPictureName) as Texture;
 		var texture = rend.material.mainTexture;
-//		rend.material.EnableKeyword ("_ALPHATEST_ON");
 		Shader.EnableKeyword("_ALPHATEST_ON");
-//		Shader.DisableKeyword("KEYWORD_OFF");
-
-//		material = foodObject.GetComponent<Renderer>().GetComponent<Material> ();
-//		newTexture = material.mainTexture;
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
-//		rend.material.mainTexture = textures[0];
-//		material.mainTexture = newTexture;
+		
 	}
 }
