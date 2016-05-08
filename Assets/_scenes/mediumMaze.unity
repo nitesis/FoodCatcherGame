@@ -590,7 +590,7 @@ GameObject:
   - 114: {fileID: 390429022}
   m_Layer: 5
   m_Name: Canvas_ExitButton
-  m_TagString: Untagged
+  m_TagString: gui
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -994,7 +994,7 @@ GameObject:
   - 114: {fileID: 1720552254}
   m_Layer: 5
   m_Name: Canvas_FoodBoard
-  m_TagString: Untagged
+  m_TagString: gui
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
