@@ -9,7 +9,6 @@ public class FoodObjectController : MonoBehaviour
     public int prefabCount;
     public bool rearrangeObjects;
     public float rearrangeDelay = 1;
-
     private GameObject[,] maze;
     private List<ObjectContainer> objects = new List<ObjectContainer>();
     private List<Position> emptyPositions;
@@ -62,19 +61,41 @@ public class FoodObjectController : MonoBehaviour
         {
             Position tempPos = null;
             List<Position> positions = sensorZoneFleeObject(pos);
-            while (tempPos == null)
+            bool allBusy = true;
+            int listIndex=0;
+            while(allBusy==true && listIndex < 4 )
             {
-                tempPos = positions[random.Next(0, 3)];
+                if (maze[positions[listIndex].x, positions[listIndex].y]==null)
+                {
+                    allBusy = false;
+                }
+                listIndex++;
             }
 
-            maze[tempPos.x, tempPos.y] = obj;
-            maze[pos.x, pos.y] = null;
+            if (!allBusy)
+            {
+                while (tempPos == null)
+                {
+                    int n = random.Next(0, 3);
+                    if (maze[positions[n].x, positions[n].y] == null)
+                    {
+                        tempPos = positions[n];
+                    }
+                }
 
-           // obj.transform.position = new Vector3(tempPos.x, obj.transform.position.y, tempPos.y);
+                // maze[tempPos.x, tempPos.y] = obj;
+                //maze[pos.x, pos.y] = null;
+
+                 obj.transform.position = new Vector3(tempPos.x, obj.transform.position.y, tempPos.y);
+                if (obj == fleeObject1)
+                    posFleeObject1 = tempPos;
+                else
+                    posFleeObject2 = tempPos;
 
 
-            // Destroy(obj.gameObject);
-           // obj.transform.position = new Vector3 (Mathf.Sin(Time.time * 3), obj.transform.position.y, obj.transform.position.z);
+                // Destroy(obj.gameObject);
+                // obj.transform.position = new Vector3 (Mathf.Sin(Time.time * 3), obj.transform.position.y, obj.transform.position.z);
+            }
         }
 
        
