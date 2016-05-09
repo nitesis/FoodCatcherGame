@@ -6,7 +6,6 @@ TagManager:
   tags:
   - ball
   - food
-  - gui
   layers:
   - Default
   - TransparentFX
