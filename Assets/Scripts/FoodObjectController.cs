@@ -135,6 +135,7 @@ public class FoodObjectController : MonoBehaviour
                 }
             }  
         }
+        emptyPositions.Remove(pos);
         return pos;
     }
 
@@ -156,7 +157,7 @@ public class FoodObjectController : MonoBehaviour
     private GameObject PlaceFleeObject(Position pos)
     {
         maze[pos.x, pos.y] = Instantiate(spawnPrefab) as GameObject;
-        maze[pos.x, pos.y].transform.position = new Vector3(pos.x, 0.5f, pos.y);
+        maze[pos.x, pos.y].transform.position = new Vector3(pos.x, 0f, pos.y);
         return maze[pos.x, pos.y];
     }
 
@@ -165,8 +166,9 @@ public class FoodObjectController : MonoBehaviour
             var emptyTiles = new List<Position>();
             for (int i = 1; i < maze.GetLength(0) - 1; i++)
                 for (int j = 1; j < maze.GetLength(1) - 1; j++)
-                    if (maze[i, j] == null)
-                        emptyTiles.Add(new Position(i, j));
+                    if(!(i==1&&j==1) && !(i== mazeGenerator.width-2 && j== mazeGenerator.height-2))
+                       if (maze[i, j] == null)
+                           emptyTiles.Add(new Position(i, j));
             return emptyTiles;
         }
     }
