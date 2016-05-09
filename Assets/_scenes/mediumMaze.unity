@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
-  spawnPrefab: {fileID: 141530, guid: c7af1076e3a434d53a9e18cf2c6fbfea, type: 2}
+  spawnPrefab: {fileID: 105948, guid: 83716be683924417daf7b21570ea795b, type: 2}
   prefabCount: 10
   rearrangeObjects: 0
   rearrangeDelay: 0.3
@@ -837,7 +837,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22401058, guid: c0dc5781cae4a6348b42ea6b818a3f9c, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 22401058, guid: c0dc5781cae4a6348b42ea6b818a3f9c, type: 2}
       propertyPath: m_AnchoredPosition.x
