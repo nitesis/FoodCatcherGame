@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class SphereController : MonoBehaviour {
 
 	private new ParticleSystem particleSystem;
-	
+
+
 	void Start(){
 		particleSystem = gameObject.GetComponent<ParticleSystem> ();
 	}
@@ -24,10 +26,15 @@ public class SphereController : MonoBehaviour {
 
 		if (other.CompareTag("food"))
         {
+			GameObject foodboard = GameObject.Find("Canvas_FoodBoard");
+			foodboard.GetComponentInChildren<Image> ().GetComponentInChildren<Image> ().GetComponentInChildren<ChangeSprite> ().changeSprite ();
+
             Destroy(other.gameObject);
+
         }
+
 	}
-	
+
 	
 /*	void OnTriggerExit(Collider other)
 	{
