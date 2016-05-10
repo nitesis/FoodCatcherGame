@@ -6,9 +6,10 @@ public class FoodObjectController : MonoBehaviour
 {
     public MazeGenerator mazeGenerator;
     public GameObject spawnPrefab;
-    public int prefabCount;
     public bool rearrangeObjects;
     public float rearrangeDelay = 1;
+    
+
     private GameObject[,] maze;
     private List<ObjectContainer> objects = new List<ObjectContainer>();
     private List<Position> emptyPositions;
@@ -20,8 +21,18 @@ public class FoodObjectController : MonoBehaviour
     private GameObject player1;
     private GameObject player2;
 
+    private ReciepController reciepController= new ReciepController();
+    private List<string> reciepList;
+    private int prefabCount;
+
     void Start()
     {
+        // Reciep initialization
+        reciepList = reciepController.reciepList;
+        
+        prefabCount = reciepList.Count;
+        Debug.Log("prefabCount"+prefabCount);
+
         maze = mazeGenerator.GetMaze();
         emptyPositions = currentEmptyTiles;
         player1 = mazeGenerator.GetFirstPlayer();
