@@ -8,7 +8,9 @@ public class FoodObjectController : MonoBehaviour
     public GameObject spawnPrefab;
     public bool rearrangeObjects;
     public float rearrangeDelay = 1;
-    
+
+    public string foodPictureName;
+
 
     private GameObject[,] maze;
     private List<ObjectContainer> objects = new List<ObjectContainer>();
@@ -169,6 +171,10 @@ public class FoodObjectController : MonoBehaviour
     {
         maze[pos.x, pos.y] = Instantiate(spawnPrefab) as GameObject;
         maze[pos.x, pos.y].transform.position = new Vector3(pos.x, 0f, pos.y);
+
+        maze[pos.x, pos.y].GetComponentInChildren<Renderer>().material.mainTexture = Resources.Load(foodPictureName) as Texture;
+        //var texture = rend.material.mainTexture;
+        Shader.EnableKeyword("_ALPHATEST_ON");
         return maze[pos.x, pos.y];
     }
 
