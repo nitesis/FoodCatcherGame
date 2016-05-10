@@ -26,6 +26,7 @@ public class FoodObjectController : MonoBehaviour
     private ReciepController reciepController= new ReciepController();
     private List<string> reciepList;
     private int prefabCount;
+    private int indexReciepList=0;
 
     void Start()
     {
@@ -172,8 +173,8 @@ public class FoodObjectController : MonoBehaviour
         maze[pos.x, pos.y] = Instantiate(spawnPrefab) as GameObject;
         maze[pos.x, pos.y].transform.position = new Vector3(pos.x, 0f, pos.y);
 
-        maze[pos.x, pos.y].GetComponentInChildren<Renderer>().material.mainTexture = Resources.Load(foodPictureName) as Texture;
-        //var texture = rend.material.mainTexture;
+        maze[pos.x, pos.y].GetComponentInChildren<Renderer>().material.mainTexture = Resources.Load(reciepList[indexReciepList]) as Texture;
+        indexReciepList++;
         Shader.EnableKeyword("_ALPHATEST_ON");
         return maze[pos.x, pos.y];
     }
@@ -213,6 +214,9 @@ public class FoodObjectController : MonoBehaviour
     {
         var obj = (GameObject) Instantiate(prefab, new Vector3(position.x, 0, position.y), Quaternion.identity);
         maze[position.x, position.y] = obj;
+        maze[position.x, position.y].GetComponentInChildren<Renderer>().material.mainTexture = Resources.Load(reciepList[indexReciepList]) as Texture;
+        indexReciepList++;
+        Shader.EnableKeyword("_ALPHATEST_ON");
         emptyPositions.Remove(position);
         var objectContainer = new ObjectContainer(obj, position);
         objects.Add(objectContainer);

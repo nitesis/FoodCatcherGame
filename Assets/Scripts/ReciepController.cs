@@ -10,8 +10,8 @@ public class ReciepController : MonoBehaviour {
     {
         reciepList.Add("potato");
         reciepList.Add("onion");
-        reciepList.Add("gralic");
-        reciepList.Add("stock");
+        reciepList.Add("garlic");
+        reciepList.Add("cream");
         reciepList.Add("pasta");
         reciepList.Add("cheese");
         reciepList.Add("ham");
