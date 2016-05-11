@@ -207,7 +207,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 233835291}
-  m_LocalRotation: {x: 0.46984634, y: 0.46984634, z: -0.32899, w: 0.67101}
+  m_LocalRotation: {x: 0.579228, y: 0.4055798, z: -0.40557986, w: 0.57922786}
   m_LocalPosition: {x: 0, y: 12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -346,9 +346,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
   spawnPrefab: {fileID: 105948, guid: 83716be683924417daf7b21570ea795b, type: 2}
-  prefabCount: 10
   rearrangeObjects: 1
   rearrangeDelay: 0.3
+  foodPictureName: 
 --- !u!114 &316012590
 MonoBehaviour:
   m_ObjectHideFlags: 0
