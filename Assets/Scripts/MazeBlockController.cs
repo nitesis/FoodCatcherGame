@@ -22,23 +22,43 @@ public class MazeBlockController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (fallBlockActive)
+        if (Input.GetKey("y"))
         {
-
-              if (Time.timeSinceLevelLoad == timeFall)
-              {
-                  var position = randomBlockPosition();
-                  fallBlock(position);
-                  timeFall = timeFall + 2 * fallDelay;
-              }
-
-              if (Time.timeSinceLevelLoad == timeAppear && appear != null)
-              {
-
-                  riseUp(appear);
-                  timeAppear = timeAppear + 2 * fallDelay;
-              }
+            if (fallBlockActive == false) { 
+            fallBlockActive = true;
+            fallPossibleBlocks = FallPossibleBlocks();
+            Debug.Log("fallBlockActive:" + fallBlockActive);
         }
+        }
+
+        if (Input.GetKey("n"))
+        {
+            fallBlockActive = false;
+            Debug.Log("fallBlockActive:"+ fallBlockActive);
+        }
+
+        
+
+            if (Time.timeSinceLevelLoad == timeFall)
+            {
+                var position = randomBlockPosition();
+                fallBlock(position);
+                timeFall = timeFall + 2 * fallDelay;
+
+            }
+
+
+            if (Time.timeSinceLevelLoad == timeAppear)
+            {
+
+                riseUp(appear);
+                timeAppear = timeAppear + 2 * fallDelay;
+            }
+        
+
+      
+
+
     }
 
 
@@ -91,17 +111,25 @@ public class MazeBlockController : MonoBehaviour
 
     private GameObject fallBlock(Position pos)
     {
-        GameObject block = maze[pos.x, pos.y];
-        block.transform.position = new Vector3(block.transform.position.x, -5.0f, block.transform.position.z);
-       // return maze[pos.x, pos.y];
-       return  appear = maze[pos.x, pos.y];
+        if (fallBlockActive)
+        {
+            GameObject block = maze[pos.x, pos.y];
+            block.transform.position = new Vector3(block.transform.position.x, -20f, block.transform.position.z);
+            return appear = block;
+        }
+
+        return null;
 
     }
 
     private void riseUp(GameObject block)
     {
-        block.transform.position = new Vector3(block.transform.position.x, 0.7f, block.transform.position.z);
+        if (fallBlockActive)
+        {
+            block.transform.position = new Vector3(block.transform.position.x, 0.7f, block.transform.position.z);
+        }
     }
+
 
     private Position randomBlockPosition()
     {
