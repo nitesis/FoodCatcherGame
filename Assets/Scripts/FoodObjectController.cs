@@ -7,7 +7,7 @@ public class FoodObjectController : MonoBehaviour
     public MazeGenerator mazeGenerator;
     public GameObject spawnPrefab;
     public bool rearrangeObjects;
-    public float rearrangeDelay = 1;
+    public float rearrangeDelay ;
 
     public string foodPictureName;
 
@@ -60,7 +60,22 @@ public class FoodObjectController : MonoBehaviour
 
     void Update()
     {
-        if(fleeObject1!=null)
+
+        if (Input.GetKey("up"))
+        {
+            if (rearrangeDelay > 0)
+            {
+                rearrangeDelay = rearrangeDelay - 0.1f;
+            }
+        }
+
+        if (Input.GetKey("down"))
+        {
+                rearrangeDelay = rearrangeDelay +0.1f;
+        }
+
+
+        if (fleeObject1!=null)
             moveFleeObject(fleeObject1, posFleeObject1);
 
         if (fleeObject2 != null)
