@@ -295,6 +295,7 @@ MonoBehaviour:
   spawnPrefab: {fileID: 105948, guid: 83716be683924417daf7b21570ea795b, type: 2}
   rearrangeObjects: 1
   rearrangeDelay: 0.3
+  level: easy
   foodPictureName: 
 --- !u!1 &335966994
 GameObject:
@@ -963,6 +964,7 @@ GameObject:
   - 224: {fileID: 747514742}
   - 222: {fileID: 747514744}
   - 114: {fileID: 747514743}
+  - 114: {fileID: 747514745}
   m_Layer: 5
   m_Name: cheese_sw
   m_TagString: Untagged
@@ -1020,6 +1022,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 747514741}
+--- !u!114 &747514745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 747514741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bwImg: {fileID: 747514743}
 --- !u!1 &926081518
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,6 +1124,7 @@ GameObject:
   - 224: {fileID: 1018507968}
   - 222: {fileID: 1018507970}
   - 114: {fileID: 1018507969}
+  - 114: {fileID: 1018507971}
   m_Layer: 5
   m_Name: garlic_sw
   m_TagString: Untagged
@@ -1167,6 +1182,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1018507967}
+--- !u!114 &1018507971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1018507967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bwImg: {fileID: 1018507969}
 --- !u!1 &1179289258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1271,7 @@ GameObject:
   - 224: {fileID: 1563010720}
   - 222: {fileID: 1563010722}
   - 114: {fileID: 1563010721}
+  - 114: {fileID: 1563010723}
   m_Layer: 5
   m_Name: maizena_sw
   m_TagString: Untagged
@@ -1301,6 +1329,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1563010719}
+--- !u!114 &1563010723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1563010719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bwImg: {fileID: 1563010721}
 --- !u!1 &1597744365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1455,7 @@ GameObject:
   - 224: {fileID: 1626923731}
   - 222: {fileID: 1626923733}
   - 114: {fileID: 1626923732}
+  - 114: {fileID: 1626923734}
   m_Layer: 5
   m_Name: wine_sw
   m_TagString: Untagged
@@ -1472,6 +1513,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1626923730}
+--- !u!114 &1626923734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1626923730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bwImg: {fileID: 1626923732}
 --- !u!1 &1698403654
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class FoodObjectController : MonoBehaviour
     public GameObject spawnPrefab;
     public bool rearrangeObjects;
     public float rearrangeDelay ;
+    public string level;
 
     public string foodPictureName;
 
@@ -24,15 +25,52 @@ public class FoodObjectController : MonoBehaviour
     private GameObject player2;
 
     private ReciepController reciepController= new ReciepController();
-    private List<string> reciepList;
+    private List<string> reciepList=new List<string>();
     private int prefabCount;
     private int indexReciepList=0;
 
     void Start()
     {
         // Reciep initialization
-        reciepList = reciepController.reciepList;
-        
+        // reciepList = reciepController.reciepList;
+
+        // Reciep initialization
+        // reciepList = reciepController.reciepList;
+        if (level == "easy")
+        {
+            reciepList.Add("cheese");
+            reciepList.Add("garlic");
+            reciepList.Add("wine");
+            reciepList.Add("maizena");
+            reciepList.Add("cheese");
+        }
+
+        if (level == "medium")
+        {
+            reciepList.Add("potato");
+            reciepList.Add("onion");
+            reciepList.Add("garlic");
+            reciepList.Add("cream");
+            reciepList.Add("pasta");
+            reciepList.Add("cheese");
+            reciepList.Add("ham");
+            reciepList.Add("apple");
+        }
+
+        if (level == "hard")
+        {
+            reciepList.Add("egg");
+            reciepList.Add("cream");
+            reciepList.Add("ham");
+            reciepList.Add("butter");
+            reciepList.Add("cress");
+            reciepList.Add("flour");
+            reciepList.Add("salsiz");
+            reciepList.Add("chard");
+        }
+
+        //==========================================================
+
         prefabCount = reciepList.Count;
         Debug.Log("prefabCount"+prefabCount);
 

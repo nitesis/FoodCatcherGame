@@ -726,6 +726,7 @@ MonoBehaviour:
   spawnPrefab: {fileID: 105948, guid: 83716be683924417daf7b21570ea795b, type: 2}
   rearrangeObjects: 1
   rearrangeDelay: 0.3
+  level: medium
   foodPictureName: 
 --- !u!1 &335966994
 GameObject:
