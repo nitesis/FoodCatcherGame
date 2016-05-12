@@ -85,6 +85,73 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &10014396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 10014397}
+  - 222: {fileID: 10014399}
+  - 114: {fileID: 10014398}
+  m_Layer: 5
+  m_Name: cheese
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &10014397
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 10014396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 237391191}
+  m_RootOrder: 14
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -20, y: -970}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &10014398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 10014396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 7337fa29acad4ba46b7a71a4029a33d5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &10014399
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 10014396}
 --- !u!1 &95673831
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +229,7 @@ GameObject:
   - 224: {fileID: 145685262}
   - 222: {fileID: 145685264}
   - 114: {fileID: 145685263}
+  - 114: {fileID: 145685265}
   m_Layer: 5
   m_Name: garlic_sw
   m_TagString: Untagged
@@ -219,6 +287,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 145685261}
+--- !u!114 &145685265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 145685261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bwImg: {fileID: 145685263}
 --- !u!1 &155076963
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +468,8 @@ RectTransform:
   - {fileID: 1805585943}
   - {fileID: 1431056914}
   - {fileID: 1445662793}
+  - {fileID: 10014397}
+  - {fileID: 510945054}
   m_Father: {fileID: 1720552253}
   m_RootOrder: 0
   m_AnchorMin: {x: 1, y: 0.5}
@@ -642,7 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
   spawnPrefab: {fileID: 105948, guid: 83716be683924417daf7b21570ea795b, type: 2}
-  rearrangeObjects: 0
+  rearrangeObjects: 1
   rearrangeDelay: 0.3
   foodPictureName: 
 --- !u!1 &335966994
@@ -792,6 +874,7 @@ GameObject:
   - 224: {fileID: 368394874}
   - 222: {fileID: 368394876}
   - 114: {fileID: 368394875}
+  - 114: {fileID: 368394877}
   m_Layer: 5
   m_Name: onion_sw
   m_TagString: Untagged
@@ -849,6 +932,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 368394873}
+--- !u!114 &368394877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368394873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bwImg: {fileID: 368394875}
 --- !u!1 &379628166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +1125,7 @@ GameObject:
   - 224: {fileID: 466794976}
   - 222: {fileID: 466794978}
   - 114: {fileID: 466794977}
+  - 114: {fileID: 466794979}
   m_Layer: 5
   m_Name: ham_sw
   m_TagString: Untagged
@@ -1087,6 +1183,98 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 466794975}
+--- !u!114 &466794979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 466794975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bwImg: {fileID: 466794977}
+--- !u!1 &510945053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 510945054}
+  - 222: {fileID: 510945056}
+  - 114: {fileID: 510945055}
+  - 114: {fileID: 510945057}
+  m_Layer: 5
+  m_Name: cheese_sw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &510945054
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510945053}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 237391191}
+  m_RootOrder: 15
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -20, y: -970}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &510945055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510945053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: ce24fa408c6f82d4ba8a3c1bf394cf4e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &510945056
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510945053}
+--- !u!114 &510945057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 510945053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bwImg: {fileID: 510945055}
 --- !u!1 &590400945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,7 +1349,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 590400945}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
   m_Name: 
@@ -1458,6 +1646,7 @@ GameObject:
   - 224: {fileID: 1445662793}
   - 222: {fileID: 1445662795}
   - 114: {fileID: 1445662794}
+  - 114: {fileID: 1445662796}
   m_Layer: 5
   m_Name: potato_sw
   m_TagString: Untagged
@@ -1515,6 +1704,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1445662792}
+--- !u!114 &1445662796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1445662792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bwImg: {fileID: 1445662794}
 --- !u!1 &1552151339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,6 +2000,7 @@ GameObject:
   - 224: {fileID: 1731316513}
   - 222: {fileID: 1731316515}
   - 114: {fileID: 1731316514}
+  - 114: {fileID: 1731316516}
   m_Layer: 5
   m_Name: pasta_sw
   m_TagString: Untagged
@@ -1856,6 +2058,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1731316512}
+--- !u!114 &1731316516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1731316512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bwImg: {fileID: 1731316514}
 --- !u!1 &1805585942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,6 +2080,7 @@ GameObject:
   - 224: {fileID: 1805585943}
   - 222: {fileID: 1805585945}
   - 114: {fileID: 1805585944}
+  - 114: {fileID: 1805585946}
   m_Layer: 5
   m_Name: cream_sw
   m_TagString: Untagged
@@ -1923,6 +2138,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1805585942}
+--- !u!114 &1805585946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1805585942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de129dd8430e4308a5e1fb9d7cd41af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bwImg: {fileID: 1805585944}
 --- !u!1 &1900847836
 GameObject:
   m_ObjectHideFlags: 0

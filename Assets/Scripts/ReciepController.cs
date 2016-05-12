@@ -15,6 +15,7 @@ public class ReciepController : MonoBehaviour {
         reciepList.Add("pasta");
         reciepList.Add("cheese");
         reciepList.Add("ham");
+        reciepList.Add("apple");
     }
 
 
