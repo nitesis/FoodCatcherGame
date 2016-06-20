@@ -58,6 +58,10 @@ public class SphereController : MonoBehaviour {
 
                      other.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;*/
 
+			//Implement your Faller game object into this variable in the inspector
+			//var FallerObject : GameObject;
+			//monsterfall=Animation
+			//FallerObject.animation.Play("monstersfall");
             Destroy(other.gameObject);
 
         }
