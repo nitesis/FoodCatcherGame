@@ -570,6 +570,17 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_PrefabInternal: {fileID: 646437637}
+--- !u!114 &423357352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 423357350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a658a463fb6554aeb96a30ac9c3e8916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &423357363
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -953,7 +964,12 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &707217959
