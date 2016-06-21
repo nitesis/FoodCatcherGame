@@ -6,10 +6,13 @@ using System.Collections.Generic;
 public class TestSphereController : MonoBehaviour {
 
 	private new ParticleSystem particleSystem;
+	public float thrust;
+	public Rigidbody rb;
 
 
 	void Start(){
 		particleSystem = gameObject.GetComponent<ParticleSystem> ();
+		rb = GetComponent<Rigidbody>();
 	}
 	
 	void OnTriggerEnter(Collider other) {
@@ -27,8 +30,8 @@ public class TestSphereController : MonoBehaviour {
 
 		if (other.CompareTag("food"))
         {
-            
-            Destroy(other.gameObject);
+			rb.AddForce(0,0, thrust, ForceMode.Impulse);
+            //Destroy(other.gameObject);
 
         }
 
