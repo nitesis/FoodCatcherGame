@@ -6,10 +6,16 @@ using System.Collections.Generic;
 public class SphereController : MonoBehaviour {
 
 	private new ParticleSystem particleSystem;
+	public float thrust;
+	public Rigidbody rb;
+	public MazeGenerator mazeGenerator;
+	private FoodObjectController foodObjectController;
 
 
 	void Start(){
 		particleSystem = gameObject.GetComponent<ParticleSystem> ();
+		rb = GetComponent<Rigidbody>();
+		foodObjectController = mazeGenerator.GetComponent<FoodObjectController> ();
 	}
 	
 	void OnTriggerEnter(Collider other) {
@@ -62,7 +68,9 @@ public class SphereController : MonoBehaviour {
 			//var FallerObject : GameObject;
 			//monsterfall=Animation
 			//FallerObject.animation.Play("monstersfall");
-            Destroy(other.gameObject);
+			rb.AddForce(0,0, thrust, ForceMode.Impulse);
+			foodObjectController.rearrangeObjects = false;
+            //Destroy(other.gameObject);
 
         }
 
