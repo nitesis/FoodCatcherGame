@@ -67,6 +67,7 @@ public class FoodObjectController : MonoBehaviour
             reciepList.Add("flour");
             reciepList.Add("salsiz");
             reciepList.Add("chard");
+            reciepList.Add("onion");
         }
 
         //==========================================================
