@@ -28,14 +28,12 @@ public class MazeBlockController : MonoBehaviour
             if (fallBlockActive == false) { 
             fallBlockActive = true;
             fallPossibleBlocks = FallPossibleBlocks();
-            Debug.Log("fallBlockActive:" + fallBlockActive);
         }
         }
 
         if (Input.GetKey("n"))
         {
             fallBlockActive = false;
-            Debug.Log("fallBlockActive:"+ fallBlockActive);
         }
 
         
