@@ -79,13 +79,7 @@ public class MazeGenerator : MonoBehaviour
 
         GameObject ptype = null;
 
-        firstPlayer = Instantiate(player) as GameObject;
-        firstPlayer.transform.position = new Vector3(1, 0.5f, 1);
-        ret[1, 1] = firstPlayer;
-
-        secondPlayer = Instantiate(player) as GameObject;
-        secondPlayer.transform.position = new Vector3(width - 2, 0.5f, height - 2);
-        ret[width - 2, height - 2] = secondPlayer;
+        
 
 
         for (int i = 0; i <= Maze.GetUpperBound(0); i++)
