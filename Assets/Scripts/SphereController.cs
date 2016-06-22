@@ -20,9 +20,8 @@ public class SphereController : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other) {
 		if (other.CompareTag ("ball")) {
-			if (!particleSystem.isPlaying) {
-				particleSystem.Play ();
-			}
+            particleSystem.Play();
+            other.GetComponent<ParticleSystem>().Play();
 
 			if (gameObject.GetComponent<AudioSource> ()) {
 				gameObject.GetComponent<AudioSource> ().Play ();
