@@ -68,9 +68,9 @@ public class SphereController : MonoBehaviour {
 			//var FallerObject : GameObject;
 			//monsterfall=Animation
 			//FallerObject.animation.Play("monstersfall");
-			rb.AddForce(0,0, thrust, ForceMode.Impulse);
-			foodObjectController.rearrangeObjects = false;
-            //Destroy(other.gameObject);
+			//rb.AddForce(0,0, thrust, ForceMode.Impulse);
+			//foodObjectController.rearrangeObjects = false;
+            Destroy(other.gameObject);
 
         }
 

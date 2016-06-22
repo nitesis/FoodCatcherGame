@@ -360,7 +360,7 @@ MonoBehaviour:
   mazeGenerator: {fileID: 316012587}
   spawnPrefab: {fileID: 105948, guid: 83716be683924417daf7b21570ea795b, type: 2}
   rearrangeObjects: 1
-  rearrangeDelay: 0.3
+  rearrangeDelay: 0.7
   level: hard
   foodPictureName: 
 --- !u!114 &316012590
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
-  fallDelay: 1
+  fallDelay: 2
   fallBlockActive: 1
 --- !u!1 &317214299
 GameObject:
@@ -688,7 +688,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22401058, guid: c0dc5781cae4a6348b42ea6b818a3f9c, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 22401058, guid: c0dc5781cae4a6348b42ea6b818a3f9c, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -938,7 +938,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: d63e0e08c672741b8bb2193dfcc5485a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f5f3a454b33ad41828b4616b3d716faf, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -964,6 +964,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 825445828}
+--- !u!1001 &855388379
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_Name
+      value: Sphere1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &890837856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,6 +2014,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1824486628}
+--- !u!1001 &1836982508
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_Name
+      value: Sphere2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1900847836
 GameObject:
   m_ObjectHideFlags: 0
