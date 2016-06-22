@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
-  fallDelay: 3
+  fallDelay: 2
   fallBlockActive: 1
 --- !u!114 &316012590
 MonoBehaviour:
@@ -294,7 +294,7 @@ MonoBehaviour:
   mazeGenerator: {fileID: 316012587}
   spawnPrefab: {fileID: 105948, guid: 83716be683924417daf7b21570ea795b, type: 2}
   rearrangeObjects: 1
-  rearrangeDelay: 0.3
+  rearrangeDelay: 0.7
   level: easy
   foodPictureName: 
 --- !u!1 &335966994
@@ -1265,6 +1265,60 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1179289258}
+--- !u!1001 &1450141998
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_Name
+      value: Sphere 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: InitialModule.startColor.maxColor.rgba
+      value: 4294376443
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1563010719
 GameObject:
   m_ObjectHideFlags: 0
@@ -1751,6 +1805,92 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1778167879}
+--- !u!1001 &1855840418
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_Name
+      value: Sphere1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: RotationModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: ColorBySpeedModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: ColorModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: ForceModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: InheritVelocityModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: ClampVelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: InitialModule.rotation3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19817560, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: InitialModule.startColor.maxColor.rgba
+      value: 4293851641
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1900847836
 GameObject:
   m_ObjectHideFlags: 0
