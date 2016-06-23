@@ -9,8 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 417544}
   - 136: {fileID: 13651816}
-  - 198: {fileID: 19843478}
-  - 199: {fileID: 19920826}
   m_Layer: 0
   m_Name: CylinderObject
   m_TagString: Untagged
@@ -29,6 +27,8 @@ GameObject:
   - 33: {fileID: 3384452}
   - 136: {fileID: 13662992}
   - 23: {fileID: 2310710}
+  - 198: {fileID: 19886976}
+  - 199: {fileID: 19909286}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: food
@@ -120,12 +120,12 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!198 &19843478
+--- !u!198 &19886976
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 105948}
+  m_GameObject: {fileID: 197212}
   serializedVersion: 2
   lengthInSec: 5
   startDelay:
@@ -167,14 +167,14 @@ ParticleSystem:
   randomSeed: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 1
   scalingMode: 1
   InitialModule:
     serializedVersion: 2
     enabled: 1
     startLifetime:
-      scalar: 2
+      scalar: 4
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1619,12 +1619,12 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!199 &19920826
+--- !u!199 &19909286
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 105948}
+  m_GameObject: {fileID: 197212}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
