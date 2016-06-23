@@ -75,6 +75,7 @@ public class SphereController : MonoBehaviour {
 			//foodObjectController.rearrangeObjects = false;
             Destroy(other.gameObject);
             collectSound.GetComponent<AudioSource>().Play();
+           // other.GetComponent<ParticleSystem>().Play();
 
         }
 
