@@ -25,7 +25,6 @@ public class FoodObjectController : MonoBehaviour
     private GameObject fleeObject2;
 
 	private int foodItemCount;
-
     private ReciepController reciepController= new ReciepController();
     private List<string> reciepList=new List<string>();
     private int prefabCount;
@@ -35,7 +34,7 @@ public class FoodObjectController : MonoBehaviour
 	public int FoodItemCount
 	{
 		get { return foodItemCount; }
-		set { foodItemCount = reciepList.Count; }
+		set { foodItemCount = value; }
 	}
 
 
@@ -84,7 +83,7 @@ public class FoodObjectController : MonoBehaviour
 
         prefabCount = reciepList.Count;
         Debug.Log("prefabCount"+prefabCount);
-
+		foodItemCount = reciepList.Count;
         maze = mazeGenerator.GetMaze();
         emptyPositions = currentEmptyTiles;
 

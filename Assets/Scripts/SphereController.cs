@@ -18,6 +18,7 @@ public class SphereController : MonoBehaviour {
 	void Start(){
 		particleSystem = gameObject.GetComponent<ParticleSystem> ();
 		rb = GetComponent<Rigidbody>();
+		foodObjectController = mazeGenerator.GetComponent<FoodObjectController> ();
 	}
 	
 	void OnTriggerEnter(Collider other) {
@@ -75,6 +76,7 @@ public class SphereController : MonoBehaviour {
             particleSystem.Play();
             Destroy(other.gameObject);
             collectSound.GetComponent<AudioSource>().Play();
+			foodObjectController.FoodItemCount = foodObjectController.FoodItemCount - 1;
             
 
         }
