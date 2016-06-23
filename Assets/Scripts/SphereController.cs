@@ -10,6 +10,7 @@ public class SphereController : MonoBehaviour {
 	public Rigidbody rb;
 	public MazeGenerator mazeGenerator;
     public GameObject song;
+    public GameObject collectSound;
 	private FoodObjectController foodObjectController;
 
 
@@ -73,6 +74,7 @@ public class SphereController : MonoBehaviour {
 			//rb.AddForce(0,0, thrust, ForceMode.Impulse);
 			//foodObjectController.rearrangeObjects = false;
             Destroy(other.gameObject);
+            collectSound.GetComponent<AudioSource>().Play();
 
         }
 
