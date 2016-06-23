@@ -9,16 +9,18 @@ public class SphereController : MonoBehaviour {
 	public float thrust;
 	public Rigidbody rb;
 	public MazeGenerator mazeGenerator;
+<<<<<<< HEAD
     public GameObject song;
     public GameObject collectSound;
 	private FoodObjectController foodObjectController;
+=======
+>>>>>>> master
 
 
 
 	void Start(){
 		particleSystem = gameObject.GetComponent<ParticleSystem> ();
 		rb = GetComponent<Rigidbody>();
-		foodObjectController = mazeGenerator.GetComponent<FoodObjectController> ();
 	}
 	
 	void OnTriggerEnter(Collider other) {

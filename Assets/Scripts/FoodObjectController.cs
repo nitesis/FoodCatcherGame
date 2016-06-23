@@ -9,8 +9,13 @@ public class FoodObjectController : MonoBehaviour
     public bool rearrangeObjects;
     public float rearrangeDelay ;
     public string level;
+<<<<<<< HEAD
     public GameObject player1;
     public GameObject player2;
+=======
+	public GameObject player1;
+	public GameObject player2;
+>>>>>>> master
 
     public string foodPictureName;
 
@@ -23,12 +28,25 @@ public class FoodObjectController : MonoBehaviour
     private Position posFleeObject1;
     private Position posFleeObject2;
     private GameObject fleeObject2;
+<<<<<<< HEAD
   
+=======
+    
+	private int foodItemCount;
+>>>>>>> master
 
     private ReciepController reciepController= new ReciepController();
     private List<string> reciepList=new List<string>();
     private int prefabCount;
     private int indexReciepList=0;
+
+	//some properties
+	public int FoodItemCount
+	{
+		get { return foodItemCount; }
+		set { foodItemCount = reciepList.Count; }
+	}
+
 
     void Start()
     {
@@ -118,6 +136,7 @@ public class FoodObjectController : MonoBehaviour
 
         if (fleeObject2 != null)
           moveFleeObject(fleeObject2, posFleeObject2);
+		
     }
 
     //==================================================================
