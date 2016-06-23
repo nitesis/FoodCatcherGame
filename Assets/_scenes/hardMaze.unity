@@ -464,6 +464,8 @@ MonoBehaviour:
   rearrangeObjects: 1
   rearrangeDelay: 0.7
   level: hard
+  player1: {fileID: 867876945}
+  player2: {fileID: 1010779069}
   foodPictureName: 
 --- !u!114 &316012590
 MonoBehaviour:

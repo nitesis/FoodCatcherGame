@@ -9,6 +9,8 @@ public class FoodObjectController : MonoBehaviour
     public bool rearrangeObjects;
     public float rearrangeDelay ;
     public string level;
+    public GameObject player1;
+    public GameObject player2;
 
     public string foodPictureName;
 
@@ -21,8 +23,7 @@ public class FoodObjectController : MonoBehaviour
     private Position posFleeObject1;
     private Position posFleeObject2;
     private GameObject fleeObject2;
-    private GameObject player1;
-    private GameObject player2;
+  
 
     private ReciepController reciepController= new ReciepController();
     private List<string> reciepList=new List<string>();
@@ -77,8 +78,6 @@ public class FoodObjectController : MonoBehaviour
 
         maze = mazeGenerator.GetMaze();
         emptyPositions = currentEmptyTiles;
-        player1 = mazeGenerator.GetFirstPlayer();
-        player2 = mazeGenerator.GetsecondPlayer();
 
         // Create Fleeing Objects
         posFleeObject1 = RandomPosFleeObject();

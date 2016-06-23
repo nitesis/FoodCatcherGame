@@ -298,6 +298,8 @@ MonoBehaviour:
   rearrangeObjects: 1
   rearrangeDelay: 0.7
   level: easy
+  player1: {fileID: 1855840419}
+  player2: {fileID: 1450141999}
   foodPictureName: 
 --- !u!199 &316012591
 ParticleSystemRenderer:
