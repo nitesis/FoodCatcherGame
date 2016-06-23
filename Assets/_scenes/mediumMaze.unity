@@ -782,7 +782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
-  fallDelay: 2
+  fallDelay: 5
   fallBlockActive: 1
 --- !u!114 &316012590
 MonoBehaviour:
@@ -800,6 +800,8 @@ MonoBehaviour:
   rearrangeObjects: 1
   rearrangeDelay: 0.7
   level: medium
+  player1: {fileID: 1361246157}
+  player2: {fileID: 354940927}
   foodPictureName: 
 --- !u!1 &335966994
 GameObject:
@@ -938,6 +940,10 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 335966994}
+--- !u!1 &354940927 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+  m_PrefabInternal: {fileID: 1461134169}
 --- !u!1 &368394873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1991,6 +1997,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6aff35f1107b475f8725b385724beb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodObjectController: {fileID: 316012590}
+  restartDelay: 5
+--- !u!1 &1361246157 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+  m_PrefabInternal: {fileID: 1719518235}
 --- !u!1 &1431056913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,6 +2193,14 @@ Prefab:
       propertyPath: m_Name
       value: Sphere 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: mazeGenerator
+      value: 
+      objectReference: {fileID: 316012587}
+    - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: foodObjectController
+      value: 
+      objectReference: {fileID: 316012590}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_IsPrefabParent: 0
@@ -2531,6 +2551,14 @@ Prefab:
       propertyPath: m_Name
       value: Sphere1
       objectReference: {fileID: 0}
+    - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: mazeGenerator
+      value: 
+      objectReference: {fileID: 316012587}
+    - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: foodObjectController
+      value: 
+      objectReference: {fileID: 316012590}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_IsPrefabParent: 0
