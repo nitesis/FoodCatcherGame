@@ -734,8 +734,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 316012588}
   - 114: {fileID: 316012587}
-  - 114: {fileID: 316012590}
   - 114: {fileID: 316012589}
+  - 114: {fileID: 316012590}
   m_Layer: 0
   m_Name: MazeGenerator
   m_TagString: Untagged

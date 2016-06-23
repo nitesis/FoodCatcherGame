@@ -9,7 +9,9 @@ public class SphereController : MonoBehaviour {
 	public float thrust;
 	public Rigidbody rb;
 	public MazeGenerator mazeGenerator;
+    public GameObject song;
 	private FoodObjectController foodObjectController;
+
 
 
 	void Start(){
@@ -22,16 +24,17 @@ public class SphereController : MonoBehaviour {
 		if (other.CompareTag ("ball")) {
             particleSystem.Play();
             other.GetComponent<ParticleSystem>().Play();
-
-			if (gameObject.GetComponent<AudioSource> ()) {
+            song.GetComponent<AudioSource>().Play();
+            /*if (gameObject.GetComponent<AudioSource> ()) {
 				gameObject.GetComponent<AudioSource> ().Play ();
 			} else {
 				other.gameObject.GetComponent<AudioSource>().Play();
-			}
-		}
+			}*/
+        }
 
 		if (other.CompareTag("food"))
         {
+            // place colored images on food board
             Texture texture = other.GetComponentInChildren<Renderer>().material.mainTexture;
             GameObject foodboard = GameObject.Find("Canvas_FoodBoard");
             Image[] images;
