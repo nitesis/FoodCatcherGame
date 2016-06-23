@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOverManager : MonoBehaviour {
 
-	public MazeGenerator mazeGenerator;
+	public FoodObjectController foodObjectController;
 	public float restartDelay = 5f;
 
 	Animator anim;
@@ -18,7 +18,7 @@ public class GameOverManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (mazeGenerator.foodItemCount <= 0) 
+		if (foodObjectController.FoodItemCount <= 0) 
 		{
 			anim.SetTrigger ("GameOver");
 			restartTimer += Time.deltaTime;
