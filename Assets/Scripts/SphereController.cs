@@ -74,10 +74,11 @@ public class SphereController : MonoBehaviour {
             //rb.AddForce(0,0, thrust, ForceMode.Impulse);
             //foodObjectController.rearrangeObjects = false;
             particleSystem.Play();
+            foodObjectController.FoodItemCount--;
             Destroy(other.gameObject);
             collectSound.GetComponent<AudioSource>().Play();
-			foodObjectController.FoodItemCount = foodObjectController.FoodItemCount - 1;
-            
+            Debug.Log("SpherControler Counter");
+
 
         }
 
