@@ -18,7 +18,8 @@ public class GameOverManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (foodObjectController.FoodItemCount <= 0) 
+        Debug.Log("FoodItemCount: " + foodObjectController.FoodItemCount);
+		if ((foodObjectController.FoodItemCount == -1 * foodObjectController.PrefabCount) ) 
 		{
 			anim.SetTrigger ("GameOver");
 			restartTimer += Time.deltaTime;
