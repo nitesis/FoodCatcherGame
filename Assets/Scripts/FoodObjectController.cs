@@ -174,7 +174,7 @@ public class FoodObjectController : MonoBehaviour
                 // maze[tempPos.x, tempPos.y] = obj;
                 //maze[pos.x, pos.y] = null;
 
-                 obj.transform.position = new Vector3(tempPos.x, 0, tempPos.y);
+                 obj.transform.position = new Vector3(tempPos.x, 1, tempPos.y);
                  maze[tempPos.x, tempPos.y] = obj;
                 if (obj == fleeObject1)
                     posFleeObject1 = tempPos;
@@ -239,9 +239,11 @@ public class FoodObjectController : MonoBehaviour
     private GameObject PlaceFleeObject(Position pos)
     {
         maze[pos.x, pos.y] = Instantiate(spawnPrefab) as GameObject;
-        maze[pos.x, pos.y].transform.position = new Vector3(pos.x, 0f, pos.y);
+        maze[pos.x, pos.y].transform.position = new Vector3(pos.x, 1f, pos.y);
 
         maze[pos.x, pos.y].GetComponentInChildren<Renderer>().material.mainTexture = Resources.Load(reciepList[indexReciepList]) as Texture;
+        maze[pos.x, pos.y].GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>(reciepList[indexReciepList]);
+
         indexReciepList++;
         Shader.EnableKeyword("_ALPHATEST_ON");
         return maze[pos.x, pos.y];
@@ -280,9 +282,13 @@ public class FoodObjectController : MonoBehaviour
 
     private ObjectContainer spawnObj(GameObject prefab, Position position)
     {
-        var obj = (GameObject) Instantiate(prefab, new Vector3(position.x, 0, position.y), Quaternion.identity);
+      // var obj = (GameObject) Instantiate(prefab, new Vector3(position.x,0, position.y), Quaternion.identity);
+        var obj = (GameObject)Instantiate(prefab);
+        obj.transform.position = new Vector3(position.x, 1, position.y);
         maze[position.x, position.y] = obj;
+        maze[position.x, position.y].GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>(reciepList[indexReciepList]);
         maze[position.x, position.y].GetComponentInChildren<Renderer>().material.mainTexture = Resources.Load(reciepList[indexReciepList]) as Texture;
+
         indexReciepList++;
         Shader.EnableKeyword("_ALPHATEST_ON");
         emptyPositions.Remove(position);
