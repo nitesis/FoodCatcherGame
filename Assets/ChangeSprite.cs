@@ -6,6 +6,8 @@ public class ChangeSprite : MonoBehaviour {
 
 	//public Image colorImg;
 	public Image bwImg;
+    public float ZNumber;
+    public float XNumber;
 
 	public void changeSprite()
 	{

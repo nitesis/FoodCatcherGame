@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -43,7 +43,20 @@ public class SphereController : MonoBehaviour {
             // images[2].GetComponentInChildren<ChangeSprite>().changeSprite();
             for (int i = 0; i < images.Length; i++)
                 if (texture.name + "_sw" == images[i].name)
+                {
+                    Vector3 target = new Vector3(images[i].GetComponentInChildren<ChangeSprite>().XNumber, 8, images[i].GetComponentInChildren<ChangeSprite>().ZNumber);
+                    iTween.MoveTo(other.gameObject, iTween.Hash(
+                                 "position", target,
+                                 "speed", 10,
+                                 "oncomplete", "onCompleteFromiTween",
+                                 "easetype", iTween.EaseType.linear
+                                 ));
                     images[i].GetComponentInChildren<ChangeSprite>().changeSprite();
+                    if (other.gameObject.transform.position == target)
+                    {    
+                       // Destroy(other.gameObject);
+                    }
+                }
 
             /*Transform ImageTr = foodboard.GetComponentInChildren<Image>().transform.Find("apple");
             Image image = ImageTr.GetComponent<Image>();
@@ -53,18 +66,14 @@ public class SphereController : MonoBehaviour {
              Vector3 targetPosition = new Vector3(myPosition.x, 5f, myPosition.z);
              Vector3 direction = (targetPosition - myPosition).normalized;
              float distance = Vector3.Magnitude(targetPosition - myPosition);
-
              Vector3 resultingForceAmount = 50 * direction * distance;
              other.GetComponent<Rigidbody>().AddForce(resultingForceAmount);
-
              targetPosition = new Vector3(10f, 0f, 8f);
              myPosition = other.transform.position;
              direction = (targetPosition - myPosition).normalized;
              distance = Vector3.Magnitude(targetPosition - myPosition);
-
              resultingForceAmount = 10 * direction * distance;
              other.GetComponent<Rigidbody>().AddForce(resultingForceAmount);
-
              other.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;*/
 
             //Implement your Faller game object into this variable in the inspector
@@ -75,7 +84,7 @@ public class SphereController : MonoBehaviour {
             //foodObjectController.rearrangeObjects = false;
             particleSystem.Play();
             foodObjectController.FoodItemCount--;
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
             collectSound.GetComponent<AudioSource>().Play();
             Debug.Log("SpherControler Counter");
 
@@ -95,4 +104,4 @@ public class SphereController : MonoBehaviour {
 			}
 		}
 	}*/
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
