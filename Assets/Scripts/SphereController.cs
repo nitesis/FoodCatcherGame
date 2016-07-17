@@ -95,18 +95,22 @@ public class SphereController : MonoBehaviour {
 
     private IEnumerator moveAndeChange(Collider other, Image img)
     {
-       
+        iTween.RotateTo(other.gameObject, new Vector3(90,180,0),5);
+        yield return new WaitForSeconds(0.2f);
         Vector3 target = new Vector3(img.GetComponentInChildren<ChangeSprite>().XNumber, 8, img.GetComponentInChildren<ChangeSprite>().ZNumber);
         iTween.MoveTo(other.gameObject, iTween.Hash(
                      "position", target,
-                     "speed", 10,
+                     "speed", 20,
                      "oncomplete", "onCompleteFromiTween",
                      "easetype", iTween.EaseType.linear
                      ));
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.7f);
 
         img.GetComponentInChildren<ChangeSprite>().changeSprite();
         Destroy(other.gameObject);
+        yield return new WaitForSeconds(1f);
+        //foodObjectController.FoodItemCount--;
+
 
     }
 
