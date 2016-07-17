@@ -162,20 +162,21 @@ public class FoodObjectController : MonoBehaviour
 
             if (!allBusy)
             {
-               /* while (tempPos == null)
-                {
-                    int n = random.Next(0, 3);
-                    if (maze[positions[n].x, positions[n].y] == null)
-                    {
-                        tempPos = positions[n];
-                    }
-                }*/
+                /* while (tempPos == null)
+                 {
+                     int n = random.Next(0, 3);
+                     if (maze[positions[n].x, positions[n].y] == null)
+                     {
+                         tempPos = positions[n];
+                     }
+                 }*/
 
                 // maze[tempPos.x, tempPos.y] = obj;
                 //maze[pos.x, pos.y] = null;
 
                  obj.transform.position = new Vector3(tempPos.x, 1, tempPos.y);
-                 maze[tempPos.x, tempPos.y] = obj;
+               
+                maze[tempPos.x, tempPos.y] = obj;
                 if (obj == fleeObject1)
                     posFleeObject1 = tempPos;
                 else

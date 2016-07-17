@@ -44,18 +44,16 @@ public class SphereController : MonoBehaviour {
             for (int i = 0; i < images.Length; i++)
                 if (texture.name + "_sw" == images[i].name)
                 {
-                    Vector3 target = new Vector3(images[i].GetComponentInChildren<ChangeSprite>().XNumber, 8, images[i].GetComponentInChildren<ChangeSprite>().ZNumber);
+                    StartCoroutine(moveAndeChange(other, images[i]));
+                    /*Vector3 target = new Vector3(images[i].GetComponentInChildren<ChangeSprite>().XNumber, 8, images[i].GetComponentInChildren<ChangeSprite>().ZNumber);
                     iTween.MoveTo(other.gameObject, iTween.Hash(
                                  "position", target,
                                  "speed", 10,
                                  "oncomplete", "onCompleteFromiTween",
                                  "easetype", iTween.EaseType.linear
                                  ));
-                    images[i].GetComponentInChildren<ChangeSprite>().changeSprite();
-                    if (other.gameObject.transform.position == target)
-                    {    
-                       // Destroy(other.gameObject);
-                    }
+                    images[i].GetComponentInChildren<ChangeSprite>().changeSprite();   
+                    // Destroy(other.gameObject);*/
                 }
 
             /*Transform ImageTr = foodboard.GetComponentInChildren<Image>().transform.Find("apple");
@@ -93,15 +91,33 @@ public class SphereController : MonoBehaviour {
 
 	}
 
-	
-/*	void OnTriggerExit(Collider other)
-	{
-		if (other.CompareTag ("ball"))
-		{
-			if (!particleSystem)
-			{
-				Application.LoadLevel("maze");
-			}
-		}
-	}*/
+
+
+    private IEnumerator moveAndeChange(Collider other, Image img)
+    {
+       
+        Vector3 target = new Vector3(img.GetComponentInChildren<ChangeSprite>().XNumber, 8, img.GetComponentInChildren<ChangeSprite>().ZNumber);
+        iTween.MoveTo(other.gameObject, iTween.Hash(
+                     "position", target,
+                     "speed", 10,
+                     "oncomplete", "onCompleteFromiTween",
+                     "easetype", iTween.EaseType.linear
+                     ));
+        yield return new WaitForSeconds(1.5f);
+
+        img.GetComponentInChildren<ChangeSprite>().changeSprite();
+        Destroy(other.gameObject);
+
+    }
+
+    /*	void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag ("ball"))
+            {
+                if (!particleSystem)
+                {
+                    Application.LoadLevel("maze");
+                }
+            }
+        }*/
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
