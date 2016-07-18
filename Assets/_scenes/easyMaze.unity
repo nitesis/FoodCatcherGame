@@ -2893,6 +2893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 747514743}
+  ZNumber: 5
+  XNumber: 11.5
 --- !u!1 &926081518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,6 +2942,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 926081521}
+  ZNumber: 7
+  XNumber: 11.5
 --- !u!114 &926081521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3206,6 +3210,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1018507969}
+  ZNumber: 6
+  XNumber: 11.5
 --- !u!1 &1179289258
 GameObject:
   m_ObjectHideFlags: 0
@@ -3562,6 +3568,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1563010721}
+  ZNumber: 4
+  XNumber: 11.5
 --- !u!1 &1590014342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3870,6 +3878,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1626923732}
+  ZNumber: 2
+  XNumber: 11.5
 --- !u!1 &1698403654
 GameObject:
   m_ObjectHideFlags: 0
