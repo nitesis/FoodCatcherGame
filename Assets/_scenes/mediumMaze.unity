@@ -799,8 +799,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
   spawnPrefab: {fileID: 117536, guid: b32e356fcfa7bfe40b73b05a0f783de1, type: 2}
-  rearrangeObjects: 0
-  rearrangeDelay: 0.5
+  rearrangeObjects: 1
+  rearrangeDelay: 0
   level: medium
   player1: {fileID: 606865696}
   player2: {fileID: 467107173}

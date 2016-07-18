@@ -81,7 +81,7 @@ public class SphereController : MonoBehaviour {
             //rb.AddForce(0,0, thrust, ForceMode.Impulse);
             //foodObjectController.rearrangeObjects = false;
             particleSystem.Play();
-            foodObjectController.FoodItemCount--;
+            //foodObjectController.FoodItemCount--;
             //Destroy(other.gameObject);
             collectSound.GetComponent<AudioSource>().Play();
             Debug.Log("SpherControler Counter");
@@ -105,10 +105,11 @@ public class SphereController : MonoBehaviour {
                      "easetype", iTween.EaseType.linear
                      ));
         yield return new WaitForSeconds(0.7f);
-
         img.GetComponentInChildren<ChangeSprite>().changeSprite();
         Destroy(other.gameObject);
-        yield return new WaitForSeconds(1f);
+        foodObjectController.FoodItemCount--;
+
+        // yield return new WaitForSeconds(1f);
         //foodObjectController.FoodItemCount--;
 
 
