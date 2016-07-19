@@ -28,6 +28,8 @@ sysinfo.txt
 # FoodCatcherGame specific files
 /Assets/TouchScript/
 /Assets/TouchScript.meta
+/Assets/MaterialUI/
+/Assets/MaterialUI.meta
 
 
 # =========================
