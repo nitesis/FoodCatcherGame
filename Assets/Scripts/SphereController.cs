@@ -40,21 +40,17 @@ public class SphereController : MonoBehaviour {
             GameObject foodboard = GameObject.Find("Canvas_FoodBoard");
             Image[] images;
             images = foodboard.GetComponentInChildren<Image>().GetComponentsInChildren<Image>();
-            // images[2].GetComponentInChildren<ChangeSprite>().changeSprite();
             for (int i = 0; i < images.Length; i++)
                 if (texture.name + "_sw" == images[i].name)
                 {
                     StartCoroutine(moveAndeChange(other, images[i]));
-                    /*Vector3 target = new Vector3(images[i].GetComponentInChildren<ChangeSprite>().XNumber, 8, images[i].GetComponentInChildren<ChangeSprite>().ZNumber);
-                    iTween.MoveTo(other.gameObject, iTween.Hash(
-                                 "position", target,
-                                 "speed", 10,
-                                 "oncomplete", "onCompleteFromiTween",
-                                 "easetype", iTween.EaseType.linear
-                                 ));
-                    images[i].GetComponentInChildren<ChangeSprite>().changeSprite();   
-                    // Destroy(other.gameObject);*/
                 }
+
+            particleSystem.Play();
+            //foodObjectController.FoodItemCount--;
+            //Destroy(other.gameObject);
+            collectSound.GetComponent<AudioSource>().Play();
+            Debug.Log("SpherControler Counter");
 
             /*Transform ImageTr = foodboard.GetComponentInChildren<Image>().transform.Find("apple");
             Image image = ImageTr.GetComponent<Image>();
@@ -80,12 +76,6 @@ public class SphereController : MonoBehaviour {
             //FallerObject.animation.Play("monstersfall");
             //rb.AddForce(0,0, thrust, ForceMode.Impulse);
             //foodObjectController.rearrangeObjects = false;
-            particleSystem.Play();
-            foodObjectController.FoodItemCount--;
-            //Destroy(other.gameObject);
-            collectSound.GetComponent<AudioSource>().Play();
-            Debug.Log("SpherControler Counter");
-
 
         }
 
@@ -105,10 +95,13 @@ public class SphereController : MonoBehaviour {
                      "easetype", iTween.EaseType.linear
                      ));
         yield return new WaitForSeconds(0.7f);
-
         img.GetComponentInChildren<ChangeSprite>().changeSprite();
+        foodObjectController.FoodObjectList.Remove(other.gameObject);
         Destroy(other.gameObject);
-        yield return new WaitForSeconds(1f);
+        //foodObjectController.FoodItemCount--;
+
+
+        // yield return new WaitForSeconds(1f);
         //foodObjectController.FoodItemCount--;
 
 

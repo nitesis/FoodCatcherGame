@@ -27,20 +27,27 @@ public class FoodObjectController : MonoBehaviour
 	private int foodItemCount;
     private ReciepController reciepController= new ReciepController();
     private List<string> reciepList=new List<string>();
+    private List<GameObject> foodObjectList= new List<GameObject>();
     private int prefabCount;
     private int indexReciepList=0;
 
 	//some properties
 	public int FoodItemCount
 	{
-		get { return foodItemCount; }
-		set { foodItemCount = value; }
+        get { return foodItemCount; }
+        set { foodItemCount = value; }
 	}
 
     public int PrefabCount
     {
         get { return prefabCount; }
         set { prefabCount = value; }
+    }
+
+    public List<GameObject> FoodObjectList
+    {
+        get { return foodObjectList; }
+
     }
 
 
@@ -88,7 +95,7 @@ public class FoodObjectController : MonoBehaviour
         //==========================================================
 
         prefabCount = reciepList.Count;
-		foodItemCount = reciepList.Count;
+        foodItemCount = reciepList.Count;
         Debug.Log("foodCount" + foodItemCount);
         maze = mazeGenerator.GetMaze();
         emptyPositions = currentEmptyTiles;
@@ -96,13 +103,15 @@ public class FoodObjectController : MonoBehaviour
         // Create Fleeing Objects
         posFleeObject1 = RandomPosFleeObject();
         posFleeObject2 = RandomPosFleeObject();
-        fleeObject1 =PlaceFleeObject(posFleeObject1);
-        fleeObject2=PlaceFleeObject(posFleeObject2);
+        fleeObject1 = PlaceFleeObject(posFleeObject1);
+        fleeObject2 = PlaceFleeObject(posFleeObject2);
 
         // Create hiding and appearing Objects
-        var maxObjects = System.Math.Min(emptyPositions.Count, prefabCount-2);
-        for (int i = 0; i < maxObjects; i++)
+        var maxObjects = System.Math.Min(emptyPositions.Count, prefabCount - 2);
+        for (int i = 0; i < maxObjects; i++) { 
             spawnRandom(spawnPrefab);
+    }
+            
         if (rearrangeObjects)
             StartCoroutine(rearrange());
 
@@ -239,7 +248,9 @@ public class FoodObjectController : MonoBehaviour
 
     private GameObject PlaceFleeObject(Position pos)
     {
-        maze[pos.x, pos.y] = Instantiate(spawnPrefab) as GameObject;
+        GameObject obj= Instantiate(spawnPrefab) as GameObject;
+        FoodObjectList.Add(obj);
+        maze[pos.x, pos.y] = obj;
         maze[pos.x, pos.y].transform.position = new Vector3(pos.x, 1f, pos.y);
 
         maze[pos.x, pos.y].GetComponentInChildren<Renderer>().material.mainTexture = Resources.Load(reciepList[indexReciepList]) as Texture;
@@ -285,6 +296,7 @@ public class FoodObjectController : MonoBehaviour
     {
       // var obj = (GameObject) Instantiate(prefab, new Vector3(position.x,0, position.y), Quaternion.identity);
         var obj = (GameObject)Instantiate(prefab);
+        foodObjectList.Add(obj);
         obj.transform.position = new Vector3(position.x, 1, position.y);
         maze[position.x, position.y] = obj;
         maze[position.x, position.y].GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>(reciepList[indexReciepList]);

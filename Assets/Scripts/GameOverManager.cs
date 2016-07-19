@@ -19,8 +19,9 @@ public class GameOverManager : MonoBehaviour {
 	void Update () 
 	{
         Debug.Log("FoodItemCount: " + foodObjectController.FoodItemCount);
-		if ((foodObjectController.FoodItemCount == -1 * foodObjectController.PrefabCount) ) 
-		{
+        //if ((foodObjectController.FoodItemCount <= 0) )
+        if ((foodObjectController.FoodObjectList.Count==0))
+            {
 			anim.SetTrigger ("GameOver");
 			restartTimer += Time.deltaTime;
 		}
