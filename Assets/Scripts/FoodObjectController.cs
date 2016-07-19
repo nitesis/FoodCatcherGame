@@ -60,11 +60,11 @@ public class FoodObjectController : MonoBehaviour
         // reciepList = reciepController.reciepList;
         if (level == "easy")
         {
-            reciepList.Add("cheese");
+            reciepList.Add("cheese1");
             reciepList.Add("garlic");
             reciepList.Add("wine");
             reciepList.Add("maizena");
-            reciepList.Add("cheese");
+            reciepList.Add("cheese2");
         }
 
         if (level == "medium")
