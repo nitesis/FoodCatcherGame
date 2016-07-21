@@ -6,9 +6,11 @@ using System.Collections.Generic;
 public class ReciepCSVReader: MonoBehaviour
 {
     public TextAsset file;
-    private string reciep;
-    private List<string> reciepList;
     private int cntIngredient;
+
+    private string reciep;
+    private List<string> reciepList=new List<string>();
+    
 
     public int CntIngredient
     {
@@ -38,6 +40,24 @@ public class ReciepCSVReader: MonoBehaviour
         Load(file);
         reciep = PlayerPrefs.GetString("ChoosedReciep");
         cntIngredient = PlayerPrefs.GetInt("IngredientsCount");
+        reciepList.Add(FindAll_Ingredient1(reciep).ToString());
+        Debug.Log(FindAll_Ingredient1(reciep).ToString());
+        reciepList.Add(FindAll_Ingredient2(reciep).ToString());
+        reciepList.Add(FindAll_Ingredient3(reciep).ToString());
+        reciepList.Add(FindAll_Ingredient4(reciep).ToString());
+        reciepList.Add(FindAll_Ingredient5(reciep).ToString());
+        reciepList.Add(FindAll_Ingredient6(reciep).ToString());
+        reciepList.Add(FindAll_Ingredient7(reciep).ToString());
+        reciepList.Add(FindAll_Ingredient8(reciep).ToString());
+        reciepList.Add(FindAll_Ingredient9(reciep).ToString());
+        reciepList.Add(FindAll_Ingredient10(reciep).ToString());
+        reciepList.Add(FindAll_Ingredient11(reciep).ToString());
+        reciepList.Add(FindAll_Ingredient12(reciep).ToString());
+
+        for (int i=cntIngredient; i<reciepList.Count;i++)
+        {
+            reciepList.RemoveAt(i);
+        }
     }
 
 
