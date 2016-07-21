@@ -440,7 +440,7 @@ MonoBehaviour:
   level: easy
   player1: {fileID: 1855840419}
   player2: {fileID: 1450141999}
-  foodPictureName: 
+  CSV: {fileID: 410866020}
 --- !u!199 &316012591
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0

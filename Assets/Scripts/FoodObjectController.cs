@@ -59,7 +59,7 @@ public class FoodObjectController : MonoBehaviour
         r = reciepCSVReader.Reciep;
         Debug.Log("Hier from FoodobjectController: " + r);*/
 
-       // Debug.Log("Hier from FoodobjectController: " + PlayerPrefs.GetString("ChoosedReciep"));
+        Debug.Log("Hier from FoodobjectController: " + PlayerPrefs.GetString("ChoosedReciep"));
 
         // Reciep initialization
         // reciepList = reciepController.reciepList;
