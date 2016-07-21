@@ -18,7 +18,6 @@ public class GameOverManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-        Debug.Log("FoodItemCount: " + foodObjectController.FoodItemCount);
         //if ((foodObjectController.FoodItemCount <= 0) )
         if ((foodObjectController.FoodObjectList.Count==0))
             {

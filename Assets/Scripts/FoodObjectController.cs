@@ -53,11 +53,17 @@ public class FoodObjectController : MonoBehaviour
 
     void Start()
     {
-        // Reciep initialization
-        // reciepList = reciepController.reciepList;
+        /*string r;
+        GameObject c = GameObject.Find("CSV");
+        ReciepCSVReader reciepCSVReader= c.GetComponent<ScriptableObject>(ReciepCSVReader);
+        r = reciepCSVReader.Reciep;
+        Debug.Log("Hier from FoodobjectController: " + r);*/
+
+       // Debug.Log("Hier from FoodobjectController: " + PlayerPrefs.GetString("ChoosedReciep"));
 
         // Reciep initialization
         // reciepList = reciepController.reciepList;
+
         if (level == "easy")
         {
             reciepList.Add("cheese1");
@@ -96,7 +102,6 @@ public class FoodObjectController : MonoBehaviour
 
         prefabCount = reciepList.Count;
         foodItemCount = reciepList.Count;
-        Debug.Log("foodCount" + foodItemCount);
         maze = mazeGenerator.GetMaze();
         emptyPositions = currentEmptyTiles;
 

@@ -50,7 +50,7 @@ public class SphereController : MonoBehaviour {
             //foodObjectController.FoodItemCount--;
             //Destroy(other.gameObject);
             collectSound.GetComponent<AudioSource>().Play();
-            Debug.Log("SpherControler Counter");
+
 
             /*Transform ImageTr = foodboard.GetComponentInChildren<Image>().transform.Find("apple");
             Image image = ImageTr.GetComponent<Image>();
