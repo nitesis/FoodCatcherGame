@@ -21,10 +21,13 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void EasyMaze() {
+        PlayerPrefs.SetString("ChoosedReciep", "Capuns");
+        PlayerPrefs.SetInt("IngredientsCount", 5);
 		LoadScene("easyMaze");
-	}
 
-	public void MediumMaze() {
+    }
+
+    public void MediumMaze() {
 		LoadScene("mediumMaze");
 	}
 

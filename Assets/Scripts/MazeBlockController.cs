@@ -22,7 +22,6 @@ public class MazeBlockController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Debug.Log("Time.timeSinceLevelLoad=" + Time.timeSinceLevelLoad);
         if (Input.GetKey("y"))
         {
             if (fallBlockActive == false) { 
@@ -40,7 +39,6 @@ public class MazeBlockController : MonoBehaviour
 
             if (Time.timeSinceLevelLoad > timeFall)
             {
-            Debug.Log("jetzt fallen=" + Time.timeSinceLevelLoad);
             var position = randomBlockPosition();
                 fallBlock(position);
                 timeFall = timeFall + 2 * fallDelay;
