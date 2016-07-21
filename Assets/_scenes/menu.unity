@@ -165,7 +165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &138838169
 RectTransform:
   m_ObjectHideFlags: 0
@@ -323,8 +323,8 @@ MonoBehaviour:
         m_RotationOrder: 4
       StartPos: {x: 0, y: 105.999985, z: 0}
       EndPos: {x: 0, y: 0, z: 0}
-      StartWorldPos: {x: 118.5, y: 172.49998, z: 0}
-      EndWorldPos: {x: 118.5, y: 66.5, z: 0}
+      StartWorldPos: {x: 207, y: 222.49998, z: 0}
+      EndWorldPos: {x: 207, y: 116.5, z: 0}
     ScalePropetiesAnim:
       scaleEnabled: 0
       TweenCurveEnterScale:
