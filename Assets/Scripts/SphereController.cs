@@ -50,7 +50,7 @@ public class SphereController : MonoBehaviour {
                 }
 
             particleSystem.Play();
-            //foodObjectController.FoodItemCount--;
+            foodObjectController.FoodItemCount--;
             //Destroy(other.gameObject);
             collectSound.GetComponent<AudioSource>().Play();
 
