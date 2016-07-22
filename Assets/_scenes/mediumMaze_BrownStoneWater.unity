@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.42745098, g: 0.47058824, b: 0.5058824, a: 1}
+  m_Color: {r: 0.8039216, g: 0.40784314, b: 0.5294118, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -820,7 +820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 11
   height: 7
-  brick: {fileID: 2100000, guid: b34204b48fefe452db7f85261ec677df, type: 2}
+  brick: {fileID: 2100000, guid: fb0d97085daff70438b2a95dcef13a93, type: 2}
   player: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
 --- !u!4 &316012588
 Transform:
@@ -1478,7 +1478,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 402666, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
       propertyPath: m_Name
@@ -1500,10 +1500,6 @@ Prefab:
       propertyPath: collectSound
       value: 
       objectReference: {fileID: 1969201809}
-    - target: {fileID: 2318504, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e5b16878252b94431841fde3842c683c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_IsPrefabParent: 0
@@ -2027,7 +2023,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22401058, guid: c0dc5781cae4a6348b42ea6b818a3f9c, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 22401058, guid: c0dc5781cae4a6348b42ea6b818a3f9c, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -2558,7 +2554,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1af41386b6aebff43af8aff2e57927a8, type: 2}
+    - target: {fileID: 11400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
@@ -2588,7 +2592,7 @@ RectTransform:
   m_GameObject: {fileID: 1552151339}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 237391191}
   m_RootOrder: 10
@@ -2753,7 +2757,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: f008e338c526d4fce8e6e6371a08e88d, type: 2}
+  - {fileID: 2100000, guid: 1be79a959daa04069b147f9b3f797183, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -2926,10 +2930,6 @@ Prefab:
       propertyPath: collectSound
       value: 
       objectReference: {fileID: 1969201809}
-    - target: {fileID: 2318504, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e5b16878252b94431841fde3842c683c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_IsPrefabParent: 0

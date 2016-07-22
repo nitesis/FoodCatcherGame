@@ -820,7 +820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 11
   height: 7
-  brick: {fileID: 2100000, guid: 20dbcc9f0b4434c91b3b8bb63e3fa682, type: 2}
+  brick: {fileID: 2100000, guid: ce3606f0d60a344868559d502ad82936, type: 2}
   player: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
 --- !u!4 &316012588
 Transform:
@@ -957,7 +957,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 335966996}
-        m_MethodName: MainMenu
+        m_MethodName: MenuTest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

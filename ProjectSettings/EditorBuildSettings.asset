@@ -5,17 +5,43 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_scenes/menu.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/_scenes/menuRecipeEasy.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/_scenes/menuRecipeMedium.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/_scenes/menuRecipeHard.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/_scenes/easyMaze.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/_scenes/mediumMaze.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/_scenes/hardMaze.unity
+  - enabled: 1
+    path: Assets/_scenes/menuTest.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_BrownStoneFlowerOrange.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_BrownStoneFlowerYellow.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_BrownStoneGrass.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_BrownStoneWater.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_GreyStoneFlowerRed.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_waterBrownStone.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_waterBrownStoneLight.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_waterFlowerOrange.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_waterFlowerRed.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_waterFlowerWhite.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_waterFlowerYellow.unity
+  - enabled: 1
+    path: Assets/_scenes/mediumMaze_waterGreyStone.unity
