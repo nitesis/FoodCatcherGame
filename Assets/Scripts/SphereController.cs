@@ -11,6 +11,7 @@ public class SphereController : MonoBehaviour {
 	public MazeGenerator mazeGenerator;
     public GameObject song;
     public GameObject collectSound;
+    public GameOverManager gameObjectManeger;
 	private FoodObjectController foodObjectController;
 
 
@@ -26,6 +27,8 @@ public class SphereController : MonoBehaviour {
             particleSystem.Play();
             other.GetComponent<ParticleSystem>().Play();
             song.GetComponent<AudioSource>().Play();
+            if (foodObjectController.FoodObjectList.Count == 0)
+                gameObjectManeger.SphereCollided = true;
             /*if (gameObject.GetComponent<AudioSource> ()) {
 				gameObject.GetComponent<AudioSource> ().Play ();
 			} else {
@@ -98,6 +101,7 @@ public class SphereController : MonoBehaviour {
         img.GetComponentInChildren<ChangeSprite>().changeSprite();
         foodObjectController.FoodObjectList.Remove(other.gameObject);
         Destroy(other.gameObject);
+
         //foodObjectController.FoodItemCount--;
 
 

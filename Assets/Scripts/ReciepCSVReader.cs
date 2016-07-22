@@ -40,23 +40,28 @@ public class ReciepCSVReader: MonoBehaviour
         Load(file);
         reciep = PlayerPrefs.GetString("ChoosedReciep");
         cntIngredient = PlayerPrefs.GetInt("IngredientsCount");
-        reciepList.Add(FindAll_Ingredient1(reciep).ToString());
-        Debug.Log(FindAll_Ingredient1(reciep).ToString());
-        reciepList.Add(FindAll_Ingredient2(reciep).ToString());
-        reciepList.Add(FindAll_Ingredient3(reciep).ToString());
-        reciepList.Add(FindAll_Ingredient4(reciep).ToString());
-        reciepList.Add(FindAll_Ingredient5(reciep).ToString());
-        reciepList.Add(FindAll_Ingredient6(reciep).ToString());
-        reciepList.Add(FindAll_Ingredient7(reciep).ToString());
-        reciepList.Add(FindAll_Ingredient8(reciep).ToString());
-        reciepList.Add(FindAll_Ingredient9(reciep).ToString());
-        reciepList.Add(FindAll_Ingredient10(reciep).ToString());
-        reciepList.Add(FindAll_Ingredient11(reciep).ToString());
-        reciepList.Add(FindAll_Ingredient12(reciep).ToString());
 
-        for (int i=cntIngredient; i<reciepList.Count;i++)
-        {
-            reciepList.RemoveAt(i);
+
+        reciepList.Add(Find_Reciep(reciep).Ingredient1.ToString());
+        reciepList.Add(Find_Reciep(reciep).Ingredient2.ToString());
+        reciepList.Add(Find_Reciep(reciep).Ingredient3.ToString());
+        reciepList.Add(Find_Reciep(reciep).Ingredient4.ToString());
+        reciepList.Add(Find_Reciep(reciep).Ingredient5.ToString());
+        reciepList.Add(Find_Reciep(reciep).Ingredient6.ToString());
+        reciepList.Add(Find_Reciep(reciep).Ingredient7.ToString());
+        reciepList.Add(Find_Reciep(reciep).Ingredient8.ToString());
+        reciepList.Add(Find_Reciep(reciep).Ingredient9.ToString());
+        reciepList.Add(Find_Reciep(reciep).Ingredient10.ToString());
+        reciepList.Add(Find_Reciep(reciep).Ingredient11.ToString());
+        reciepList.Add(Find_Reciep(reciep).Ingredient12.ToString());
+
+
+        reciepList.RemoveRange(cntIngredient, reciepList.Count-cntIngredient);
+
+        Debug.Log("ReciepList Elements:");
+        for (int i=0; i<reciepList.Count; i++)
+        { 
+            Debug.Log(reciepList[i].ToString());
         }
     }
 
