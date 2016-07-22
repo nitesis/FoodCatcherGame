@@ -21,18 +21,22 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void EasyMaze() {
-        PlayerPrefs.SetString("ChoosedReciep", "Capuns");
+        PlayerPrefs.SetString("ChoosedReciep", "Fondue");
         PlayerPrefs.SetInt("IngredientsCount", 5);
 		LoadScene("easyMaze");
 
     }
 
     public void MediumMaze() {
-		LoadScene("mediumMaze");
+        PlayerPrefs.SetString("ChoosedReciep", "Aelplermagronen");
+        PlayerPrefs.SetInt("IngredientsCount", 9);
+        LoadScene("mediumMaze");
 	}
 
 	public void HardMaze() {
-		LoadScene("hardMaze");
+        PlayerPrefs.SetString("ChoosedReciep", "Capuns");
+        PlayerPrefs.SetInt("IngredientsCount", 9);
+        LoadScene("hardMaze");
 	}
 
 	private void LoadScene(string sceneName) {
