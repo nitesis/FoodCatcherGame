@@ -11,8 +11,7 @@ public class FoodObjectController : MonoBehaviour
     public string level;
     public GameObject player1;
     public GameObject player2;
-
-    public string foodPictureName;
+    public ReciepCSVReader reciepCSVReader;
 
 
     private GameObject[,] maze;
@@ -25,7 +24,6 @@ public class FoodObjectController : MonoBehaviour
     private GameObject fleeObject2;
 
 	private int foodItemCount;
-    private ReciepController reciepController= new ReciepController();
     private List<string> reciepList=new List<string>();
     private List<GameObject> foodObjectList= new List<GameObject>();
     private int prefabCount;
@@ -53,18 +51,13 @@ public class FoodObjectController : MonoBehaviour
 
     void Start()
     {
-        /*string r;
-        GameObject c = GameObject.Find("CSV");
-        ReciepCSVReader reciepCSVReader= c.GetComponent<ScriptableObject>(ReciepCSVReader);
-        r = reciepCSVReader.Reciep;
-        Debug.Log("Hier from FoodobjectController: " + r);*/
 
         Debug.Log("Hier from FoodobjectController: " + PlayerPrefs.GetString("ChoosedReciep"));
+        Debug.Log(reciepCSVReader.ReciepList.Count);
+        reciepList = reciepCSVReader.ReciepList;
 
-        // Reciep initialization
-        // reciepList = reciepController.reciepList;
 
-        if (level == "easy")
+       /* if (level == "easy")
         {
             reciepList.Add("cheese1");
             reciepList.Add("garlic");
@@ -97,7 +90,7 @@ public class FoodObjectController : MonoBehaviour
             reciepList.Add("chard");
             reciepList.Add("onion");
         }
-
+        */
         //==========================================================
 
         prefabCount = reciepList.Count;
@@ -327,9 +320,12 @@ public class FoodObjectController : MonoBehaviour
 
     public void moveObjectContainer(ObjectContainer objectContainer, Position newPosition)
     {
-        moveObject(objectContainer.obj.transform, newPosition);
-        updateMaze(objectContainer.position, newPosition, objectContainer.obj);
-        swapPositions(objectContainer.position, newPosition);
+        if (objectContainer.obj != null)
+        {
+            moveObject(objectContainer.obj.transform, newPosition);
+            updateMaze(objectContainer.position, newPosition, objectContainer.obj);
+            swapPositions(objectContainer.position, newPosition);
+        }
     }
     
     private ObjectContainer randomObjectContainer {
