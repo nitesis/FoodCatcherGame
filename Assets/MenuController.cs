@@ -20,6 +20,56 @@ public class MenuController : MonoBehaviour {
 		LoadScene ("menuRecipeHard");
 	}
 
+	public void MenuTest() {
+		LoadScene ("menuTest");
+	}
+	public void MediumMaze_BrownStoneFlowerOrange() {
+		LoadScene ("mediumMaze_BrownStoneFlowerOrange");
+	}
+
+	public void MediumMaze_BrownStoneFlowerYellow() {
+		LoadScene ("mediumMaze_BrownStoneFlowerYellow");
+	}
+
+	public void MediumMaze_BrownStoneGrass() {
+		LoadScene ("mediumMaze_BrownStoneGrass");
+	}
+
+	public void MediumMaze_BrownStoneWater() {
+		LoadScene ("mediumMaze_BrownStoneWater");
+	}
+
+	public void MediumMaze_GreyStoneFlowerRed() {
+		LoadScene ("mediumMaze_GreyStoneFlowerRed");
+	}
+
+	public void MediumMaze_waterBrownStone() {
+		LoadScene ("mediumMaze_waterBrownStone");
+	}
+
+	public void MediumMaze_waterBrownStoneLight() {
+		LoadScene ("mediumMaze_waterBrownStoneLight");
+	}
+
+	public void MediumMaze_waterFlowerOrange() {
+		LoadScene ("mediumMaze_waterFlowerOrange");
+	}
+
+	public void MediumMaze_waterFlowerRed() {
+		LoadScene ("mediumMaze_waterFlowerRed");
+	}
+
+	public void MediumMaze_waterFlowerWhite() {
+		LoadScene ("mediumMaze_waterFlowerWhite");
+	}
+
+	public void MediumMaze_waterFlowerYellow() {
+		LoadScene ("mediumMaze_waterFlowerYellow");
+	}
+
+	public void MediumMaze_waterGreyStone() {
+		LoadScene ("mediumMaze_waterGreyStone");
+	}
 	public void EasyMaze() {
         PlayerPrefs.SetString("ChoosedReciep", "Fondue");
         PlayerPrefs.SetInt("IngredientsCount", 5);
