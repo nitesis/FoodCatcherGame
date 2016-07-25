@@ -29,11 +29,7 @@ public class SphereController : MonoBehaviour {
             song.GetComponent<AudioSource>().Play();
             if (foodObjectController.FoodObjectList.Count == 0)
                 gameObjectManeger.SphereCollided = true;
-            /*if (gameObject.GetComponent<AudioSource> ()) {
-				gameObject.GetComponent<AudioSource> ().Play ();
-			} else {
-				other.gameObject.GetComponent<AudioSource>().Play();
-			}*/
+           
         }
 
 		if (other.CompareTag("food"))
@@ -41,56 +37,37 @@ public class SphereController : MonoBehaviour {
             // place colored images on food board
             Texture texture = other.GetComponentInChildren<Renderer>().material.mainTexture;
             GameObject foodboard = GameObject.Find("Canvas_FoodBoard");
-            Image[] images;
+            /*Image[] images;
             images = foodboard.GetComponentInChildren<Image>().GetComponentsInChildren<Image>();
             for (int i = 0; i < images.Length; i++)
                 if (texture.name + "_sw" == images[i].name)
                 {
                     StartCoroutine(moveAndeChange(other, images[i]));
                 }
+                */
+            Button[] buttons = foodboard.GetComponentInChildren<Image>().GetComponentsInChildren<Button>();
+            for (int i = 0; i < buttons.Length; i++)
+                if (texture.name + "_sw" == buttons[i].GetComponent<Image>().sprite.name)
+                {
+                    StartCoroutine(moveAndeChange(other, buttons[i]));
+                }
 
             particleSystem.Play();
             foodObjectController.FoodItemCount--;
-            //Destroy(other.gameObject);
             collectSound.GetComponent<AudioSource>().Play();
 
 
-            /*Transform ImageTr = foodboard.GetComponentInChildren<Image>().transform.Find("apple");
-            Image image = ImageTr.GetComponent<Image>();
-            GetComponentInChildren<Renderer>().material.mainTexture;*/
-
-            /* Vector3 myPosition = other.transform.position;
-             Vector3 targetPosition = new Vector3(myPosition.x, 5f, myPosition.z);
-             Vector3 direction = (targetPosition - myPosition).normalized;
-             float distance = Vector3.Magnitude(targetPosition - myPosition);
-             Vector3 resultingForceAmount = 50 * direction * distance;
-             other.GetComponent<Rigidbody>().AddForce(resultingForceAmount);
-             targetPosition = new Vector3(10f, 0f, 8f);
-             myPosition = other.transform.position;
-             direction = (targetPosition - myPosition).normalized;
-             distance = Vector3.Magnitude(targetPosition - myPosition);
-             resultingForceAmount = 10 * direction * distance;
-             other.GetComponent<Rigidbody>().AddForce(resultingForceAmount);
-             other.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;*/
-
-            //Implement your Faller game object into this variable in the inspector
-            //var FallerObject : GameObject;
-            //monsterfall=Animation
-            //FallerObject.animation.Play("monstersfall");
-            //rb.AddForce(0,0, thrust, ForceMode.Impulse);
-            //foodObjectController.rearrangeObjects = false;
-
-        }
+         }
 
 	}
 
 
 
-    private IEnumerator moveAndeChange(Collider other, Image img)
+    private IEnumerator moveAndeChange(Collider other, Button btn)
     {
         iTween.RotateTo(other.gameObject, new Vector3(90,180,0),5);
         yield return new WaitForSeconds(0.2f);
-        Vector3 target = new Vector3(img.GetComponentInChildren<ChangeSprite>().XNumber, 8, img.GetComponentInChildren<ChangeSprite>().ZNumber);
+        Vector3 target = new Vector3(btn.GetComponentInChildren<ChangeSprite>().XNumber, 8, btn.GetComponentInChildren<ChangeSprite>().ZNumber);
         iTween.MoveTo(other.gameObject, iTween.Hash(
                      "position", target,
                      "speed", 20,
@@ -98,8 +75,11 @@ public class SphereController : MonoBehaviour {
                      "easetype", iTween.EaseType.linear
                      ));
         yield return new WaitForSeconds(0.7f);
-        img.GetComponentInChildren<ChangeSprite>().changeSprite();
-        foodObjectController.FoodObjectList.Remove(other.gameObject);
+        btn.GetComponentInChildren<ChangeSprite>().changeSprite();
+        if (other.gameObject != null)
+        {
+            foodObjectController.FoodObjectList.Remove(other.gameObject);
+        }
         Destroy(other.gameObject);
 
         //foodObjectController.FoodItemCount--;
@@ -111,14 +91,5 @@ public class SphereController : MonoBehaviour {
 
     }
 
-    /*	void OnTriggerExit(Collider other)
-        {
-            if (other.CompareTag ("ball"))
-            {
-                if (!particleSystem)
-                {
-                    Application.LoadLevel("maze");
-                }
-            }
-        }*/
+
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
