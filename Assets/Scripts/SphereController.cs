@@ -76,7 +76,10 @@ public class SphereController : MonoBehaviour {
                      ));
         yield return new WaitForSeconds(0.7f);
         btn.GetComponentInChildren<ChangeSprite>().changeSprite();
-        foodObjectController.FoodObjectList.Remove(other.gameObject);
+        if (other.gameObject != null)
+        {
+            foodObjectController.FoodObjectList.Remove(other.gameObject);
+        }
         Destroy(other.gameObject);
 
         //foodObjectController.FoodItemCount--;

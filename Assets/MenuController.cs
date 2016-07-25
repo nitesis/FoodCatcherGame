@@ -79,7 +79,7 @@ public class MenuController : MonoBehaviour {
 
     public void MediumMaze() {
         PlayerPrefs.SetString("ChoosedReciep", "Aelplermagronen");
-        PlayerPrefs.SetInt("IngredientsCount", 9);
+        PlayerPrefs.SetInt("IngredientsCount", 8);
         LoadScene("mediumMaze");
 	}
 

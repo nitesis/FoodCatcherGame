@@ -23,6 +23,14 @@ public class BoardController : MonoBehaviour {
             j += 2;
         }
 
+        for(int k=j-1; j<buttons.Length; j++)
+        {
+
+            Color c=buttons[j].image.color;
+            c.a = 0.0f;
+            buttons[j].image.color = c;
+        }
+
     }
     void Update () {
 	
