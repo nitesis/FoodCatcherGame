@@ -1623,7 +1623,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
       propertyPath: m_Name
-      value: Sphere12
+      value: Sphere2
       objectReference: {fileID: 0}
     - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
       propertyPath: mazeGenerator
