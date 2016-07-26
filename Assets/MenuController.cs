@@ -70,13 +70,16 @@ public class MenuController : MonoBehaviour {
 	public void MediumMaze_waterGreyStone() {
 		LoadScene ("mediumMaze_waterGreyStone");
 	}
-	public void EasyMaze() {
+	public void EasyMazeFondue() {
         PlayerPrefs.SetString("ChoosedReciep", "Fondue");
         PlayerPrefs.SetInt("IngredientsCount", 5);
 		LoadScene("easyMaze");
-
     }
-
+	public void EasyMazeRoesti() {
+		PlayerPrefs.SetString("ChoosedReciep", "Roesti");
+		PlayerPrefs.SetInt("IngredientsCount", 5);
+		LoadScene("easyMaze");
+	}
     public void MediumMaze() {
         PlayerPrefs.SetString("ChoosedReciep", "Aelplermagronen");
         PlayerPrefs.SetInt("IngredientsCount", 8);
