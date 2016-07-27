@@ -31,12 +31,22 @@ public class SphereController : MonoBehaviour {
             if (foodObjectController.FoodObjectList.Count == 0)
             {
                 gameObjectManeger.SphereCollided = true;
-                winSound.GetComponent<AudioSource>().Play();
+                if (song.GetComponent<AudioSource>().isPlaying)
+                    song.GetComponent<AudioSource>().Stop();
+                if(!other.GetComponent<SphereController>().song.GetComponent<AudioSource>().isPlaying)
+                    other.GetComponent<SphereController>().song.GetComponent<AudioSource>().Stop();
+                if((!winSound.GetComponent<AudioSource>().isPlaying)
+                    && (!other.GetComponent<SphereController>().winSound.GetComponent<AudioSource>().isPlaying))
+                    winSound.GetComponent<AudioSource>().Play();
             }
             else
-            song.GetComponent<AudioSource>().Play();
-            
-           
+                if ((!song.GetComponent<AudioSource>().isPlaying)
+                    && (!other.GetComponent<SphereController>().song.GetComponent<AudioSource>().isPlaying)
+                    && (!winSound.GetComponent<AudioSource>().isPlaying)
+                    && (!other.GetComponent<SphereController>().winSound.GetComponent<AudioSource>().isPlaying))
+            {
+                song.GetComponent<AudioSource>().Play();
+            }
         }
 
 		if (other.CompareTag("food"))
