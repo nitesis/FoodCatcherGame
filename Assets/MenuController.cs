@@ -101,7 +101,7 @@ public class MenuController : MonoBehaviour {
 		LoadScene("easyMaze");
     }
 	public void EasyMazeRoesti() {
-		PlayerPrefs.SetString("ChoosedReciep", "Roesti");
+		PlayerPrefs.SetString("ChoosedReciep", "roesti");
 		PlayerPrefs.SetInt("IngredientsCount", 5);
 		LoadScene("easyMaze");
 	}

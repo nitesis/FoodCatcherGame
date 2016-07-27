@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverManager : MonoBehaviour {
 
@@ -8,6 +9,9 @@ public class GameOverManager : MonoBehaviour {
 	public float restartDelay = 8f;
 
     private bool sphereCollided;
+	private string recipe;
+	private Image image;
+	private Sprite newSprite;
 
     public bool SphereCollided
     {
@@ -27,14 +31,16 @@ public class GameOverManager : MonoBehaviour {
     void Start()
     {
         sphereCollided = false;
+		LoadSpritesInGameOverScreen ();
     }
-	
+		
 	// Update is called once per frame
 	void Update () 
 	{
         //if ((foodObjectController.FoodItemCount <= 0) )
         if ((foodObjectController.FoodObjectList.Count==0)&& (sphereCollided==true))
             {
+			
             restartTimer += Time.deltaTime;
             if (restartTimer >= restartDelay)
             {
@@ -47,5 +53,19 @@ public class GameOverManager : MonoBehaviour {
 		    {
 			SceneManager.LoadScene ("menu");
 		    }
+	}
+
+	public void LoadSpritesInGameOverScreen()
+	{
+		Debug.Log("LoadSpritesInGameOverScreen() started");
+		Debug.Log("From FoodobjectController: " + PlayerPrefs.GetString("ChoosedReciep"));
+		recipe = PlayerPrefs.GetString ("ChoosedReciep");
+		newSprite = Resources.Load<Sprite> (recipe);
+		Debug.Log("GetComponent<Image>().sprite = " + recipe);
+		Image[] images = GetComponentsInChildren<Image>();
+		Debug.Log("Laenge des Image Arrays: " + images.Length);
+		images[2].GetComponent<Image>().sprite = newSprite;
+
+
 	}
 }
