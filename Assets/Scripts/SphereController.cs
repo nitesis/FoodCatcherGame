@@ -11,6 +11,7 @@ public class SphereController : MonoBehaviour {
 	public MazeGenerator mazeGenerator;
     public GameObject song;
     public GameObject collectSound;
+    public GameObject landingSound;
     public GameOverManager gameObjectManeger;
 	private FoodObjectController foodObjectController;
 
@@ -53,7 +54,6 @@ public class SphereController : MonoBehaviour {
                 }
 
             particleSystem.Play();
-            foodObjectController.FoodItemCount--;
             collectSound.GetComponent<AudioSource>().Play();
 
 
@@ -76,11 +76,13 @@ public class SphereController : MonoBehaviour {
                      ));
         yield return new WaitForSeconds(0.7f);
         btn.GetComponentInChildren<ChangeSprite>().changeSprite();
+        landingSound.GetComponent<AudioSource>().Play();
+        Destroy(other.gameObject);
+
         if (other.gameObject != null)
         {
             foodObjectController.FoodObjectList.Remove(other.gameObject);
         }
-        Destroy(other.gameObject);
 
         //foodObjectController.FoodItemCount--;
 
