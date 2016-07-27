@@ -70,22 +70,22 @@ public class MenuController : MonoBehaviour {
 	public void MediumMaze_waterGreyStone() {
 		LoadScene ("mediumMaze_waterGreyStone");
 	}
-	public void EasyMaze(string reciepName) {
-        PlayerPrefs.SetString("ChoosedReciep", reciepName);
+	public void EasyMaze() {
+        PlayerPrefs.SetString("ChoosedReciep", "Fondue");
         PlayerPrefs.SetInt("IngredientsCount", 5);
 		LoadScene("easyMaze");
 
     }
 
-    public void MediumMaze(string reciepName, int count) {
-        PlayerPrefs.SetString("ChoosedReciep", reciepName);
-        PlayerPrefs.SetInt("IngredientsCount", count);
+    public void MediumMaze() {
+        PlayerPrefs.SetString("ChoosedReciep", "Aelplermagronen");
+        PlayerPrefs.SetInt("IngredientsCount", 8);
         LoadScene("mediumMaze");
 	}
 
-	public void HardMaze(string reciepName, int count) {
-        PlayerPrefs.SetString("ChoosedReciep", reciepName);
-        PlayerPrefs.SetInt("IngredientsCount", count);
+	public void HardMaze() {
+        PlayerPrefs.SetString("ChoosedReciep", "Capuns");
+        PlayerPrefs.SetInt("IngredientsCount", 9);
         LoadScene("hardMaze");
 	}
 
