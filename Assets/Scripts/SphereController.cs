@@ -12,6 +12,7 @@ public class SphereController : MonoBehaviour {
     public GameObject song;
     public GameObject collectSound;
     public GameObject landingSound;
+    public GameObject winSound;
     public GameOverManager gameObjectManeger;
 	private FoodObjectController foodObjectController;
 
@@ -27,9 +28,14 @@ public class SphereController : MonoBehaviour {
 		if (other.CompareTag ("ball")) {
             particleSystem.Play();
             other.GetComponent<ParticleSystem>().Play();
-            song.GetComponent<AudioSource>().Play();
             if (foodObjectController.FoodObjectList.Count == 0)
+            {
                 gameObjectManeger.SphereCollided = true;
+                winSound.GetComponent<AudioSource>().Play();
+            }
+            else
+            song.GetComponent<AudioSource>().Play();
+            
            
         }
 
@@ -78,7 +84,6 @@ public class SphereController : MonoBehaviour {
         btn.GetComponentInChildren<ChangeSprite>().changeSprite();
         landingSound.GetComponent<AudioSource>().Play();
         Destroy(other.gameObject);
-
         if (other.gameObject != null)
         {
             foodObjectController.FoodObjectList.Remove(other.gameObject);
