@@ -57,15 +57,18 @@ public class GameOverManager : MonoBehaviour {
 
 	public void LoadSpritesInGameOverScreen()
 	{
-		Debug.Log("LoadSpritesInGameOverScreen() started");
-		Debug.Log("From FoodobjectController: " + PlayerPrefs.GetString("ChoosedReciep"));
 		recipe = PlayerPrefs.GetString ("ChoosedReciep");
 		newSprite = Resources.Load<Sprite> (recipe);
-		Debug.Log("GetComponent<Image>().sprite = " + recipe);
 		Image[] images = GetComponentsInChildren<Image>();
-		Debug.Log("Laenge des Image Arrays: " + images.Length);
 		images[2].GetComponent<Image>().sprite = newSprite;
+        Text[] texts = GetComponentsInChildren<Text>();
+        texts[0].text= PlayerPrefs.GetString("reciepDE");
+        texts[1].text = "Gratulation!\n Sie haben alle Zutaten für "+ PlayerPrefs.GetString("reciepDE")+ " gesammelt.";
+        texts[1].text.Replace("\\n", "\n");
 
 
-	}
+
+
+
+    }
 }

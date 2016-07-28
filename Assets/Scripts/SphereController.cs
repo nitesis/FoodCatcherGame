@@ -12,6 +12,7 @@ public class SphereController : MonoBehaviour {
     public GameObject song;
     public GameObject collectSound;
     public GameObject landingSound;
+    public GameObject winSound;
     public GameOverManager gameObjectManeger;
 	private FoodObjectController foodObjectController;
 
@@ -27,10 +28,25 @@ public class SphereController : MonoBehaviour {
 		if (other.CompareTag ("ball")) {
             particleSystem.Play();
             other.GetComponent<ParticleSystem>().Play();
-            song.GetComponent<AudioSource>().Play();
             if (foodObjectController.FoodObjectList.Count == 0)
+            {
                 gameObjectManeger.SphereCollided = true;
-           
+                if (song.GetComponent<AudioSource>().isPlaying)
+                    song.GetComponent<AudioSource>().Stop();
+                if(!other.GetComponent<SphereController>().song.GetComponent<AudioSource>().isPlaying)
+                    other.GetComponent<SphereController>().song.GetComponent<AudioSource>().Stop();
+                if((!winSound.GetComponent<AudioSource>().isPlaying)
+                    && (!other.GetComponent<SphereController>().winSound.GetComponent<AudioSource>().isPlaying))
+                    winSound.GetComponent<AudioSource>().Play();
+            }
+            else
+                if ((!song.GetComponent<AudioSource>().isPlaying)
+                    && (!other.GetComponent<SphereController>().song.GetComponent<AudioSource>().isPlaying)
+                    && (!winSound.GetComponent<AudioSource>().isPlaying)
+                    && (!other.GetComponent<SphereController>().winSound.GetComponent<AudioSource>().isPlaying))
+            {
+                song.GetComponent<AudioSource>().Play();
+            }
         }
 
 		if (other.CompareTag("food"))
@@ -78,7 +94,6 @@ public class SphereController : MonoBehaviour {
         btn.GetComponentInChildren<ChangeSprite>().changeSprite();
         landingSound.GetComponent<AudioSource>().Play();
         Destroy(other.gameObject);
-
         if (other.gameObject != null)
         {
             foodObjectController.FoodObjectList.Remove(other.gameObject);
