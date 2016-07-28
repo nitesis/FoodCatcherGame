@@ -63,8 +63,10 @@ public class GameOverManager : MonoBehaviour {
 		newSprite = Resources.Load<Sprite> (recipe);
 		Debug.Log("GetComponent<Image>().sprite = " + recipe);
 		Image[] images = GetComponentsInChildren<Image>();
-		Debug.Log("Laenge des Image Arrays: " + images.Length);
+		Text[] texts = GetComponentsInChildren<Text> ();
+		Debug.Log("Laenge des Image Arrays: " + texts.Length);
 		images[2].GetComponent<Image>().sprite = newSprite;
+		texts [0].GetComponent<Text> ().text = recipe;
 
 
 	}
