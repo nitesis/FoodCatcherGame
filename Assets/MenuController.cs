@@ -96,7 +96,7 @@ public class MenuController : MonoBehaviour {
         LoadScene ("mediumMaze_waterGreyStone");
 	}
 	public void EasyMazeFondue() {
-        PlayerPrefs.SetString("ChoosedReciep", "Fondue");
+        PlayerPrefs.SetString("ChoosedReciep", "fondue");
         PlayerPrefs.SetInt("IngredientsCount", 5);
         PlayerPrefs.SetString("reciepDE", "Fondü");
         LoadScene("easyMaze");
