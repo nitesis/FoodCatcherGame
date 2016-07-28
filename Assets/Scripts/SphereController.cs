@@ -9,43 +9,53 @@ public class SphereController : MonoBehaviour {
 	public float thrust;
 	public Rigidbody rb;
 	public MazeGenerator mazeGenerator;
-    public GameObject song;
+    public GameObject songs;
     public GameObject collectSound;
     public GameObject landingSound;
     public GameObject winSound;
     public GameOverManager gameObjectManeger;
 	private FoodObjectController foodObjectController;
+    AudioSource[] songList;
+    private AudioSource currentSong;
+
+    public AudioSource CurrentSong
+    {
+        get{ return currentSong; }
+        set { currentSong = value;}
+    }
 
 
 
-	void Start(){
+
+    void Start(){
 		particleSystem = gameObject.GetComponent<ParticleSystem> ();
 		rb = GetComponent<Rigidbody>();
 		foodObjectController = mazeGenerator.GetComponent<FoodObjectController> ();
-	}
+        songList = songs.GetComponentsInChildren<AudioSource>();
+        currentSong = songList[Random.Range(0, songList.Length)];
+    }
 	
 	void OnTriggerEnter(Collider other) {
-		if (other.CompareTag ("ball")) {
+
+        if (!currentSong.GetComponent<AudioSource>().isPlaying)
+            currentSong = songList[Random.Range(0, songList.Length)];
+        if (other.CompareTag ("ball")) {
             particleSystem.Play();
             other.GetComponent<ParticleSystem>().Play();
             if (foodObjectController.FoodObjectList.Count == 0)
             {
+                
                 gameObjectManeger.SphereCollided = true;
-                if (song.GetComponent<AudioSource>().isPlaying)
-                    song.GetComponent<AudioSource>().Stop();
-                if(!other.GetComponent<SphereController>().song.GetComponent<AudioSource>().isPlaying)
-                    other.GetComponent<SphereController>().song.GetComponent<AudioSource>().Stop();
-                if((!winSound.GetComponent<AudioSource>().isPlaying)
-                    && (!other.GetComponent<SphereController>().winSound.GetComponent<AudioSource>().isPlaying))
+                if (currentSong.GetComponent<AudioSource>().isPlaying)
+                    currentSong.GetComponent<AudioSource>().Stop();
+                if((!winSound.GetComponent<AudioSource>().isPlaying))
                     winSound.GetComponent<AudioSource>().Play();
             }
             else
-                if ((!song.GetComponent<AudioSource>().isPlaying)
-                    && (!other.GetComponent<SphereController>().song.GetComponent<AudioSource>().isPlaying)
-                    && (!winSound.GetComponent<AudioSource>().isPlaying)
-                    && (!other.GetComponent<SphereController>().winSound.GetComponent<AudioSource>().isPlaying))
+                if ((!currentSong.GetComponent<AudioSource>().isPlaying)
+                    && (!winSound.GetComponent<AudioSource>().isPlaying))
             {
-                song.GetComponent<AudioSource>().Play();
+                currentSong.GetComponent<AudioSource>().Play();
             }
         }
 
@@ -91,13 +101,13 @@ public class SphereController : MonoBehaviour {
                      "easetype", iTween.EaseType.linear
                      ));
         yield return new WaitForSeconds(0.7f);
+        if (!(gameObject == null && !ReferenceEquals(gameObject, null)))
+            foodObjectController.FoodObjectList.Remove(other.gameObject);
         btn.GetComponentInChildren<ChangeSprite>().changeSprite();
         landingSound.GetComponent<AudioSource>().Play();
-        Destroy(other.gameObject);
-        if (other.gameObject != null)
-        {
-            foodObjectController.FoodObjectList.Remove(other.gameObject);
-        }
+        if (!(gameObject == null && !ReferenceEquals(gameObject, null)))
+            Destroy(other.gameObject);
+       
 
         //foodObjectController.FoodItemCount--;
 
