@@ -915,7 +915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 11
   height: 7
-  brick: {fileID: 2100000, guid: 22cb3238187e6460597bdc6c8fe2ae44, type: 2}
+  brick: {fileID: 2100000, guid: 052821051301bb849ab0e4f50ad32d10, type: 2}
   player: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
 --- !u!4 &316012588
 Transform:
@@ -4586,7 +4586,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: f008e338c526d4fce8e6e6371a08e88d, type: 2}
+  - {fileID: 2100000, guid: 99da247ad5da447ebba03895e429e935, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
