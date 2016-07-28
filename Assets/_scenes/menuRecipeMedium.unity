@@ -99,7 +99,7 @@ GameObject:
   - 95: {fileID: 15130744}
   - 114: {fileID: 15130743}
   m_Layer: 5
-  m_Name: Holundersirup
+  m_Name: Fischknusperli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,7 +351,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7555b5891d17e45ada38d40420ea0aba, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf0c1f1a98faf4a68971a4a62a87b6f0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -431,7 +431,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Holundersirup
+  m_Text: Fischknusperli
 --- !u!222 &175686362
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bd47bf33cd3084ecdbbee9235605f1fa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d4372d272198c42f1b89ba0d0cbf7d3f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -967,7 +967,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Meringues
+  m_Text: Fotzelschnitte
 --- !u!222 &836953997
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1180,7 +1180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Raclette
+  m_Text: Vermicelles
 --- !u!222 &1051140639
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1240,7 +1240,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 10b3174564782419eabf29d681dfed15, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5caac693e1e6344508a3fd7de16e53a3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1572,7 +1572,7 @@ GameObject:
   - 95: {fileID: 1519038985}
   - 114: {fileID: 1519038984}
   m_Layer: 5
-  m_Name: Meringues
+  m_Name: Fotzelschnitte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1724,7 +1724,7 @@ GameObject:
   - 95: {fileID: 1537130343}
   - 114: {fileID: 1537130342}
   m_Layer: 5
-  m_Name: Raclette
+  m_Name: Vermicelles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2037,7 +2037,7 @@ GameObject:
   - 95: {fileID: 1743013396}
   - 114: {fileID: 1743013395}
   m_Layer: 5
-  m_Name: Fondue
+  m_Name: BircherMuesli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2414,7 +2414,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c57e7e3711a734711854a99d589dacfd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f6867de25b4e4daeaa6ade6c2778e82, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2481,7 +2481,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4d7c6d220e1f14e35878c151cbfcc050, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2ab20dc5410dc4dffba26209dbfa5cf5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2628,7 +2628,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fondue
+  m_Text: "Bircher M\xFCsli"
 --- !u!222 &2146283512
 CanvasRenderer:
   m_ObjectHideFlags: 0
