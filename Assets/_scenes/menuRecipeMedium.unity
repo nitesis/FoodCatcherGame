@@ -118,7 +118,7 @@ RectTransform:
   - {fileID: 172340481}
   - {fileID: 175686360}
   m_Father: {fileID: 755824951}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 270, y: 80}
@@ -735,13 +735,13 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 622703563}
-  - {fileID: 1297474519}
-  - {fileID: 1264995550}
-  - {fileID: 1743013394}
-  - {fileID: 1537130341}
   - {fileID: 825404607}
-  - {fileID: 1519038983}
+  - {fileID: 1743013394}
   - {fileID: 15130742}
+  - {fileID: 1297474519}
+  - {fileID: 1537130341}
+  - {fileID: 1519038983}
+  - {fileID: 1264995550}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_AnchorMin: {x: 0, y: 0}
@@ -763,7 +763,7 @@ GameObject:
   - 95: {fileID: 825404609}
   - 114: {fileID: 825404608}
   m_Layer: 5
-  m_Name: Roesti
+  m_Name: Laubfroesche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -782,7 +782,7 @@ RectTransform:
   - {fileID: 1260413165}
   - {fileID: 1842873451}
   m_Father: {fileID: 755824951}
-  m_RootOrder: 5
+  m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -270, y: 80}
@@ -1287,7 +1287,7 @@ RectTransform:
   - {fileID: 925845353}
   - {fileID: 696511385}
   m_Father: {fileID: 755824951}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 410, y: -150}
@@ -1439,7 +1439,7 @@ RectTransform:
   - {fileID: 2141186522}
   - {fileID: 1002628014}
   m_Father: {fileID: 755824951}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -410, y: -150}
@@ -1743,7 +1743,7 @@ RectTransform:
   - {fileID: 334596855}
   - {fileID: 1051140637}
   m_Father: {fileID: 755824951}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -135, y: -150}
@@ -2056,7 +2056,7 @@ RectTransform:
   - {fileID: 2019411415}
   - {fileID: 2146283510}
   m_Father: {fileID: 755824951}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 80}
@@ -2280,7 +2280,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "R\xF6sti"
+  m_Text: "Laubfr\xF6sche"
 --- !u!222 &1842873453
 CanvasRenderer:
   m_ObjectHideFlags: 0
