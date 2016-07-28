@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 15
   height: 11
-  brick: {fileID: 2100000, guid: 63d9e5093282943c9b27ba6793dc0980, type: 2}
+  brick: {fileID: 2100000, guid: fb0d97085daff70438b2a95dcef13a93, type: 2}
   player: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
 --- !u!4 &316012588
 Transform:
@@ -2564,6 +2564,10 @@ Prefab:
       propertyPath: winSound
       value: 
       objectReference: {fileID: 159952507}
+    - target: {fileID: 2318504, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 588f5f1ec057b4e95a3a6f91f948dc0b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_IsPrefabParent: 0
@@ -5372,7 +5376,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: f008e338c526d4fce8e6e6371a08e88d, type: 2}
+  - {fileID: 2100000, guid: 56ba7dd7c5a9944bd84c4bfc56bee011, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
