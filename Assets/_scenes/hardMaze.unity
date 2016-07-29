@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 15
   height: 11
-  brick: {fileID: 2100000, guid: 63d9e5093282943c9b27ba6793dc0980, type: 2}
+  brick: {fileID: 2100000, guid: 46eec636f182343eeaf24547b5a8294a, type: 2}
   player: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
 --- !u!4 &316012588
 Transform:
@@ -2563,11 +2563,19 @@ Prefab:
     - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
       propertyPath: winSound
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 570123021}
     - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
       propertyPath: songs
       value: 
       objectReference: {fileID: 1258202113}
+=======
+      objectReference: {fileID: 159952507}
+    - target: {fileID: 2318504, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c3f951157e80c4ec7bf41bc2e252d252, type: 2}
+>>>>>>> master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_IsPrefabParent: 0
@@ -2729,7 +2737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8014706, g: 0.7192101, b: 0.66592777, a: 1}
+  m_Color: {r: 0.4627451, g: 0.4117647, b: 0.28627452, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5609,7 +5617,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: f008e338c526d4fce8e6e6371a08e88d, type: 2}
+  - {fileID: 2100000, guid: 56ba7dd7c5a9944bd84c4bfc56bee011, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -6210,6 +6218,7 @@ Prefab:
     - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
       propertyPath: winSound
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 570123021}
     - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
       propertyPath: songs
@@ -6219,6 +6228,13 @@ Prefab:
       propertyPath: m_TagString
       value: soundBall
       objectReference: {fileID: 0}
+=======
+      objectReference: {fileID: 159952507}
+    - target: {fileID: 2318504, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c3f951157e80c4ec7bf41bc2e252d252, type: 2}
+>>>>>>> master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_IsPrefabParent: 0
