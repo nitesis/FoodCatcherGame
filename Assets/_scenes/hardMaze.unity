@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 15
   height: 11
-  brick: {fileID: 2100000, guid: fb0d97085daff70438b2a95dcef13a93, type: 2}
+  brick: {fileID: 2100000, guid: 3c560b1c5b4a7c048ba5f9b87a27ffd7, type: 2}
   player: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
 --- !u!4 &316012588
 Transform:
@@ -2729,7 +2729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8014706, g: 0.7192101, b: 0.66592777, a: 1}
+  m_Color: {r: 0.4627451, g: 0.4117647, b: 0.28627452, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
