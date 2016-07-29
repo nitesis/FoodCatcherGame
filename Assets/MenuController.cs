@@ -157,12 +157,59 @@ public class MenuController : MonoBehaviour {
 	}
 
 	public void HardMaze() {
-        PlayerPrefs.SetString("ChoosedReciep", "Capuns");
+        PlayerPrefs.SetString("ChoosedReciep", "capuns");
         PlayerPrefs.SetInt("IngredientsCount", 9);
         PlayerPrefs.SetString("reciepDE", "Capuns");
         LoadScene("hardMaze");
 	}
-
+	public void HardMazeCapuns() {
+		PlayerPrefs.SetString("ChoosedReciep", "capuns");
+		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetString("reciepDE", "Capuns");
+		LoadScene("hardMaze");
+	}
+	public void HardMazeKuerbissuppe() {
+		PlayerPrefs.SetString("ChoosedReciep", "kuerbissuppe");
+		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetString("reciepDE", "Kürbissuppe");
+		LoadScene("hardMaze");
+	}
+	public void HardMazeSpinatwaehe() {
+		PlayerPrefs.SetString("ChoosedReciep", "spinatwaehe");
+		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetString("reciepDE", "Spinatwähe");
+		LoadScene("hardMaze");
+	}
+	public void HardMazeSuuremocke() {
+		PlayerPrefs.SetString("ChoosedReciep", "suuremocke");
+		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetString("reciepDE", "Suure Mocke");
+		LoadScene("hardMaze");
+	}
+	public void HardMazeFlammkuchen() {
+		PlayerPrefs.SetString("ChoosedReciep", "flammkuchen");
+		PlayerPrefs.SetInt("IngredientsCount", 11);
+		PlayerPrefs.SetString("reciepDE", "Flammkuchen");
+		LoadScene("hardMaze");
+	}
+	public void HardMazeBernerplatte() {
+		PlayerPrefs.SetString("ChoosedReciep", "bernerplatte");
+		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetString("reciepDE", "Berner Platte");
+		LoadScene("hardMaze");
+	}
+	public void HardMazeApfelwaehe() {
+		PlayerPrefs.SetString("ChoosedReciep", "apfelwaehe");
+		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetString("reciepDE", "Apfelwähe");
+		LoadScene("hardMaze");
+	}
+	public void HardMazeLauchquiche() {
+		PlayerPrefs.SetString("ChoosedReciep", "lauchquiche");
+		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetString("reciepDE", "Lauchquiche");
+		LoadScene("hardMaze");
+	}
 	private void LoadScene(string sceneName) {
 		SceneManager.LoadScene (sceneName);
 		Debug.Log ("Loading " + sceneName);
