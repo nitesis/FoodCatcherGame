@@ -4386,17 +4386,10 @@ Prefab:
       propertyPath: winSound
       value: 
       objectReference: {fileID: 40669443}
-<<<<<<< HEAD
     - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
       propertyPath: songs
       value: 
       objectReference: {fileID: 1624153046}
-=======
-    - target: {fileID: 2318504, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c3f951157e80c4ec7bf41bc2e252d252, type: 2}
->>>>>>> master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_IsPrefabParent: 0
@@ -5207,7 +5200,6 @@ Prefab:
       propertyPath: winSound
       value: 
       objectReference: {fileID: 40669443}
-<<<<<<< HEAD
     - target: {fileID: 11446758, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
       propertyPath: songs
       value: 
@@ -5216,12 +5208,6 @@ Prefab:
       propertyPath: m_TagString
       value: soundBall
       objectReference: {fileID: 0}
-=======
-    - target: {fileID: 2318504, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c3f951157e80c4ec7bf41bc2e252d252, type: 2}
->>>>>>> master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
   m_IsPrefabParent: 0
