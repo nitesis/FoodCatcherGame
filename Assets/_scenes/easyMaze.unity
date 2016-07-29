@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 7
   height: 7
-  brick: {fileID: 2100000, guid: 63d9e5093282943c9b27ba6793dc0980, type: 2}
+  brick: {fileID: 2100000, guid: 052821051301bb849ab0e4f50ad32d10, type: 2}
   player: {fileID: 119744, guid: 1bcabc891bf204796820cb04a9f62ddd, type: 2}
 --- !u!4 &316012588
 Transform:
