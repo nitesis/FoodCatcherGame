@@ -113,6 +113,48 @@ public class MenuController : MonoBehaviour {
         PlayerPrefs.SetString("reciepDE", "Älplermagronen");
         LoadScene("mediumMaze");
 	}
+	public void MediumMazeLaubfroesche() {
+		PlayerPrefs.SetString("ChoosedReciep", "laubfroesche");
+		PlayerPrefs.SetInt("IngredientsCount", 8);
+		PlayerPrefs.SetString("reciepDE", "Laubfrösche");
+		LoadScene("mediumMaze");
+	}
+	public void MediumMazeBirchermuesli() {
+		PlayerPrefs.SetString("ChoosedReciep", "birchermuesli");
+		PlayerPrefs.SetInt("IngredientsCount", 8);
+		PlayerPrefs.SetString("reciepDE", "Bircher Müsli");
+		LoadScene("mediumMaze");
+	}
+	public void MediumMazeFischknusperli() {
+		PlayerPrefs.SetString("ChoosedReciep", "fischknusperli");
+		PlayerPrefs.SetInt("IngredientsCount", 8);
+		PlayerPrefs.SetString("reciepDE", "Fischknusperli");
+		LoadScene("mediumMaze");
+	}
+	public void MediumMazeAelplermagronen() {
+		PlayerPrefs.SetString("ChoosedReciep", "aelplermagronen");
+		PlayerPrefs.SetInt("IngredientsCount", 8);
+		PlayerPrefs.SetString("reciepDE", "Älplermagronen");
+		LoadScene("mediumMaze");
+	}
+	public void MediumMazeVermicelles() {
+		PlayerPrefs.SetString("ChoosedReciep", "vermicelles");
+		PlayerPrefs.SetInt("IngredientsCount", 8);
+		PlayerPrefs.SetString("reciepDE", "Vermicelles");
+		LoadScene("mediumMaze");
+	}
+	public void MediumMazeFotzelschnitte() {
+		PlayerPrefs.SetString("ChoosedReciep", "fotzelschnitte");
+		PlayerPrefs.SetInt("IngredientsCount", 8);
+		PlayerPrefs.SetString("reciepDE", "Fotzelschnitte");
+		LoadScene("mediumMaze");
+	}
+	public void MediumMazeZuerchergeschnetzeltes() {
+		PlayerPrefs.SetString("ChoosedReciep", "zuerchergeschnetzeltes");
+		PlayerPrefs.SetInt("IngredientsCount", 8);
+		PlayerPrefs.SetString("reciepDE", "Zürcher Geschnetzeltes");
+		LoadScene("mediumMaze");
+	}
 
 	public void HardMaze() {
         PlayerPrefs.SetString("ChoosedReciep", "Capuns");
