@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ball
+  - soundBall
   - food
+  - ball
   layers:
   - Default
   - TransparentFX
