@@ -933,7 +933,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1805794325}
-        m_MethodName: EasyMazeFondue
+        m_MethodName: EasyMazeRaclette
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1237,7 +1237,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1805794325}
-        m_MethodName: EasyMazeFondue
+        m_MethodName: EasyMazeMeringue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1937,7 +1937,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1805794325}
-        m_MethodName: EasyMazeFondue
+        m_MethodName: EasyMazeSirup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

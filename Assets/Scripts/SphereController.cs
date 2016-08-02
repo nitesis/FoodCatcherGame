@@ -74,7 +74,7 @@ public class SphereController : MonoBehaviour {
                 */
             Button[] buttons = foodboard.GetComponentInChildren<Image>().GetComponentsInChildren<Button>();
             for (int i = 0; i < buttons.Length; i++)
-                if (texture.name + "_sw" == buttons[i].GetComponent<Image>().sprite.name)
+                if (texture.name + "_big_sw" == buttons[i].GetComponent<Image>().sprite.name)
                 {
                     StartCoroutine(moveAndeChange(other, buttons[i]));
                 }
