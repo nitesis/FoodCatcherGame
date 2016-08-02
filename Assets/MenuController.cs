@@ -191,6 +191,8 @@ public class MenuController : MonoBehaviour {
 		LoadScene("mediumMaze");
 	}
 
+
+    // Menues for hardMaze
 	public void HardMaze() {
         PlayerPrefs.SetString("ChoosedReciep", "capuns");
         PlayerPrefs.SetInt("IngredientsCount", 9);
@@ -211,13 +213,13 @@ public class MenuController : MonoBehaviour {
 	}
 	public void HardMazeSpinatwaehe() {
 		PlayerPrefs.SetString("ChoosedReciep", "spinatwaehe");
-		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetInt("IngredientsCount", 10);
 		PlayerPrefs.SetString("reciepDE", "Spinatwähe");
 		LoadScene("hardMaze");
 	}
 	public void HardMazeSuuremocke() {
 		PlayerPrefs.SetString("ChoosedReciep", "suuremocke");
-		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetInt("IngredientsCount", 11);
 		PlayerPrefs.SetString("reciepDE", "Suure Mocke");
 		LoadScene("hardMaze");
 	}
@@ -229,19 +231,19 @@ public class MenuController : MonoBehaviour {
 	}
 	public void HardMazeBernerplatte() {
 		PlayerPrefs.SetString("ChoosedReciep", "bernerplatte");
-		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetInt("IngredientsCount", 11);
 		PlayerPrefs.SetString("reciepDE", "Berner Platte");
 		LoadScene("hardMaze");
 	}
 	public void HardMazeApfelwaehe() {
 		PlayerPrefs.SetString("ChoosedReciep", "apfelwaehe");
-		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetInt("IngredientsCount", 11);
 		PlayerPrefs.SetString("reciepDE", "Apfelwähe");
 		LoadScene("hardMaze");
 	}
 	public void HardMazeLauchquiche() {
 		PlayerPrefs.SetString("ChoosedReciep", "lauchquiche");
-		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetInt("IngredientsCount", 10);
 		PlayerPrefs.SetString("reciepDE", "Lauchquiche");
 		LoadScene("hardMaze");
 	}
