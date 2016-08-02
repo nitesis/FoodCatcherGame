@@ -117,7 +117,6 @@ public class ReciepCSVReader: MonoBehaviour
             row.Ingredient10 = grid[i][10];
             row.Ingredient11 = grid[i][11];
             row.Ingredient12 = grid[i][12];
-
             rowList.Add(row);
         }
         isLoaded = true;

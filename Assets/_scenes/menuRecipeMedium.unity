@@ -191,8 +191,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805794324}
-        m_MethodName: 
+      - m_Target: {fileID: 1805794325}
+        m_MethodName: MediumMazeFischknusperli
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -856,7 +856,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1805794325}
-        m_MethodName: MediumMaze
+        m_MethodName: MediumMazeLaubfroesche
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1664,8 +1664,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805794324}
-        m_MethodName: 
+      - m_Target: {fileID: 1805794325}
+        m_MethodName: MediumMazeFotzelschnitte
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1772,7 +1772,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: e66583b54d32340d3914581456af3d09, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1816,8 +1816,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1805794324}
-        m_MethodName: 
+      - m_Target: {fileID: 1805794325}
+        m_MethodName: MediumMazeVermicelles
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2130,7 +2130,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1805794325}
-        m_MethodName: MediumMaze
+        m_MethodName: MediumMazeBirchermuesli
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
