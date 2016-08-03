@@ -231,7 +231,7 @@ public class MenuController : MonoBehaviour {
 	}
 	public void HardMazeBernerplatte() {
 		PlayerPrefs.SetString("ChoosedReciep", "bernerplatte");
-		PlayerPrefs.SetInt("IngredientsCount", 11);
+		PlayerPrefs.SetInt("IngredientsCount", 10);
 		PlayerPrefs.SetString("reciepDE", "Berner Platte");
 		LoadScene("hardMaze");
 	}
