@@ -156,7 +156,7 @@ public class MenuController : MonoBehaviour {
 	}
 	public void MediumMazeBirchermuesli() {
 		PlayerPrefs.SetString("ChoosedReciep", "birchermuesli");
-		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetInt("IngredientsCount", 8);
 		PlayerPrefs.SetString("reciepDE", "Bircher Müsli");
 		LoadScene("mediumMaze");
 	}
