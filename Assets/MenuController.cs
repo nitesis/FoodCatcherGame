@@ -33,9 +33,9 @@ public class MenuController : MonoBehaviour {
         LoadScene("easyMaze");
     }
 
-    public void EasyMazeSirup()
+	public void EasyMazeEldersirup()
     {
-        PlayerPrefs.SetString("ChoosedReciep", "sirup");
+		PlayerPrefs.SetString("ChoosedReciep", "eldersirup");
         PlayerPrefs.SetInt("IngredientsCount", 5);
         PlayerPrefs.SetString("reciepDE", "Holundersirup");
         LoadScene("easyMaze");
@@ -156,7 +156,7 @@ public class MenuController : MonoBehaviour {
 	}
 	public void MediumMazeBirchermuesli() {
 		PlayerPrefs.SetString("ChoosedReciep", "birchermuesli");
-		PlayerPrefs.SetInt("IngredientsCount", 9);
+		PlayerPrefs.SetInt("IngredientsCount", 8);
 		PlayerPrefs.SetString("reciepDE", "Bircher Müsli");
 		LoadScene("mediumMaze");
 	}
@@ -231,7 +231,7 @@ public class MenuController : MonoBehaviour {
 	}
 	public void HardMazeBernerplatte() {
 		PlayerPrefs.SetString("ChoosedReciep", "bernerplatte");
-		PlayerPrefs.SetInt("IngredientsCount", 11);
+		PlayerPrefs.SetInt("IngredientsCount", 10);
 		PlayerPrefs.SetString("reciepDE", "Berner Platte");
 		LoadScene("hardMaze");
 	}
