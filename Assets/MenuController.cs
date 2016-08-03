@@ -33,9 +33,9 @@ public class MenuController : MonoBehaviour {
         LoadScene("easyMaze");
     }
 
-    public void EasyMazeSirup()
+	public void EasyMazeEldersirup()
     {
-        PlayerPrefs.SetString("ChoosedReciep", "sirup");
+		PlayerPrefs.SetString("ChoosedReciep", "eldersirup");
         PlayerPrefs.SetInt("IngredientsCount", 5);
         PlayerPrefs.SetString("reciepDE", "Holundersirup");
         LoadScene("easyMaze");
