@@ -17,8 +17,8 @@ public class BoardController : MonoBehaviour {
         int j = 0;
         while (i < reciepCSVReader.ReciepList.Count)
         {
-            buttons[j].GetComponent<Image>().sprite = Resources.Load<Sprite>(reciepCSVReader.ReciepList[i]);
-            buttons[j + 1].GetComponent<Image>().sprite = Resources.Load<Sprite>(reciepCSVReader.ReciepList[i] + "_sw");
+            buttons[j].GetComponent<Image>().sprite = Resources.Load<Sprite>(reciepCSVReader.ReciepList[i]+"_big");
+            buttons[j + 1].GetComponent<Image>().sprite = Resources.Load<Sprite>(reciepCSVReader.ReciepList[i]+"_big_sw");
             i++;
             j += 2;
         }
