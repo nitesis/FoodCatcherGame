@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class FoodObjectController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class FoodObjectController : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
     public ReciepCSVReader reciepCSVReader;
+    public Text reciepText;
 
 
     private GameObject[,] maze;
@@ -51,46 +53,11 @@ public class FoodObjectController : MonoBehaviour
 
     void Start()
     {
-
+        reciepText.GetComponent <Text>().text= PlayerPrefs.GetString("reciepDE");
         Debug.Log("Hier from FoodobjectController: " + PlayerPrefs.GetString("ChoosedReciep"));
         Debug.Log(reciepCSVReader.ReciepList.Count);
         reciepList = reciepCSVReader.ReciepList;
 
-
-       /* if (level == "easy")
-        {
-            reciepList.Add("cheese1");
-            reciepList.Add("garlic");
-            reciepList.Add("wine");
-            reciepList.Add("maizena");
-            reciepList.Add("cheese2");
-        }
-
-        if (level == "medium")
-        {
-            reciepList.Add("potato");
-            reciepList.Add("onion");
-            reciepList.Add("garlic");
-            reciepList.Add("cream");
-            reciepList.Add("pasta");
-            reciepList.Add("cheese");
-            reciepList.Add("ham");
-            reciepList.Add("apple");
-        }
-
-        if (level == "hard")
-        {
-            reciepList.Add("egg");
-            reciepList.Add("cream");
-            reciepList.Add("ham");
-            reciepList.Add("butter");
-            reciepList.Add("cress");
-            reciepList.Add("flour");
-            reciepList.Add("salsiz");
-            reciepList.Add("chard");
-            reciepList.Add("onion");
-        }
-        */
         //==========================================================
 
         prefabCount = reciepList.Count;
@@ -112,9 +79,6 @@ public class FoodObjectController : MonoBehaviour
             
         if (rearrangeObjects)
             StartCoroutine(rearrange());
-
-       
-
     }
 
     void Update()
