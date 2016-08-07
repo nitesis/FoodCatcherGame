@@ -33,11 +33,11 @@ public class GameOverManager : MonoBehaviour {
         sphereCollided = false;
 		LoadSpritesInGameOverScreen ();
     }
+
 		
 	// Update is called once per frame
 	void Update () 
 	{
-        //if ((foodObjectController.FoodItemCount <= 0) )
         if ((foodObjectController.FoodObjectList.Count==0)&& (sphereCollided==true))
             {
 			
@@ -55,6 +55,7 @@ public class GameOverManager : MonoBehaviour {
 		    }
 	}
 
+
 	public void LoadSpritesInGameOverScreen()
 	{
 		recipe = PlayerPrefs.GetString ("ChoosedReciep");
@@ -65,10 +66,6 @@ public class GameOverManager : MonoBehaviour {
         texts[0].text= PlayerPrefs.GetString("reciepDE");
         texts[1].text = "Gratulation!\n Sie haben alle Zutaten für "+ PlayerPrefs.GetString("reciepDE")+ " gesammelt.";
         texts[1].text.Replace("\\n", "\n");
-
-
-
-
 
     }
 }
