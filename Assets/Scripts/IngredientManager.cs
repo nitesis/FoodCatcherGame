@@ -21,8 +21,9 @@ public class IngredientManager : MonoBehaviour {
     }
 
 
-    public void buttonPressed()
+    public void buttonPressed(Button btn)
     {
+        GetComponentInChildren<Button>().GetComponent<Image>().sprite = btn.GetComponent<Image>().sprite;
         anim.SetTrigger("Ingredient");
     }
 
