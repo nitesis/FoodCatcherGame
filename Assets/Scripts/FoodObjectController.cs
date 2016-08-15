@@ -54,8 +54,6 @@ public class FoodObjectController : MonoBehaviour
     void Start()
     {
         reciepText.GetComponent <Text>().text= PlayerPrefs.GetString("reciepDE");
-        Debug.Log("Hier from FoodobjectController: " + PlayerPrefs.GetString("ChoosedReciep"));
-        Debug.Log(reciepCSVReader.ReciepList.Count);
         reciepList = reciepCSVReader.ReciepList;
 
         //==========================================================
@@ -120,32 +118,23 @@ public class FoodObjectController : MonoBehaviour
             List<Position> positions = sensorZoneFleeObject(pos);
             bool allBusy = true;
             int listIndex=0;
+            List<int> possibleIndexes = new List<int>();
             while(allBusy==true && listIndex <4 )
             {
                 if (maze[positions[listIndex].x, positions[listIndex].y]==null)
                 {
                     allBusy = false;
-                    tempPos = positions[listIndex];
+                    possibleIndexes.Add(listIndex);
 
                 }
                 listIndex++;
             }
 
+            tempPos = positions[possibleIndexes[random.Next(0, possibleIndexes.Count-1)]];
+
             if (!allBusy)
             {
-                /* while (tempPos == null)
-                 {
-                     int n = random.Next(0, 3);
-                     if (maze[positions[n].x, positions[n].y] == null)
-                     {
-                         tempPos = positions[n];
-                     }
-                 }*/
-
-                // maze[tempPos.x, tempPos.y] = obj;
-                //maze[pos.x, pos.y] = null;
-
-                 obj.transform.position = new Vector3(tempPos.x, 1, tempPos.y);
+                obj.transform.position = new Vector3(tempPos.x, 1, tempPos.y);
                
                 maze[tempPos.x, tempPos.y] = obj;
                 if (obj == fleeObject1)
@@ -153,11 +142,7 @@ public class FoodObjectController : MonoBehaviour
                 else
                     posFleeObject2 = tempPos;
             }
-        }
-
-       
-
-        
+        }        
     }
 
     private List<Position> sensorZoneFleeObject(Position posObj)
@@ -208,6 +193,7 @@ public class FoodObjectController : MonoBehaviour
         return count;
     }
 
+
     private GameObject PlaceFleeObject(Position pos)
     {
         GameObject obj= Instantiate(spawnPrefab) as GameObject;
@@ -223,6 +209,9 @@ public class FoodObjectController : MonoBehaviour
         return maze[pos.x, pos.y];
     }
 
+    //===========================================================================================
+    //Methods used for hiding and appearing objects
+
     private List<Position> currentEmptyTiles {
         get {
             var emptyTiles = new List<Position>();
@@ -235,8 +224,6 @@ public class FoodObjectController : MonoBehaviour
         }
     }
 
-    //===========================================================================================
-    //Methods used for hiding and appearing objects
 
     public ObjectContainer spawnRandom(GameObject prefab)
     {
