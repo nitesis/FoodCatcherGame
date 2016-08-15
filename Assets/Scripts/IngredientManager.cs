@@ -42,7 +42,8 @@ public class IngredientManager : MonoBehaviour {
             pressed = true;
 
         }
-        else
+
+      else
         {
             anim.ResetTrigger("Ingredient");
             anim.SetTrigger("IngredientOut");

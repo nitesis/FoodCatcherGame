@@ -6754,7 +6754,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1638235821}
-        m_MethodName: ClickToClose
+        m_MethodName: pressToClose
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
