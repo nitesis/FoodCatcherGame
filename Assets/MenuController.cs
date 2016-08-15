@@ -4,6 +4,9 @@ using System.Collections;
 
 public class MenuController : MonoBehaviour {
 
+	public void ExitGame() {
+		Application.Quit ();
+	}
 	public void MainMenu() {
 		LoadScene ("menu");
 	}
