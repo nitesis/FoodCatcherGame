@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class IngredientManager : MonoBehaviour {
       
 
-
     Animator anim;                          
     private bool pressed;
     private bool firstRun;
@@ -30,6 +29,9 @@ public class IngredientManager : MonoBehaviour {
         if (pressed == false)
         {
             GetComponentInChildren<Button>().GetComponent<Image>().sprite = btn.GetComponent<Image>().sprite;
+            Text[] texts = GetComponentsInChildren<Text>();
+            texts[1].text= btn.GetComponentInChildren<Text>().text;
+
             if (firstRun)
             {
                 anim.SetTrigger("Ingredient");
