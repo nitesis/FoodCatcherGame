@@ -5,13 +5,10 @@ using UnityEngine.SceneManagement;
 
 
 public class IngredientManager : MonoBehaviour {
+      
 
-    public float restartDelay = 5f;         // Time to wait before restarting the level
 
-
-    Animator anim;                          // Reference to the animator component.
-    float restartTimer;                     // Timer to count up to restarting the level
-    private Button pressedbutton;
+    Animator anim;                          
     private bool pressed;
     private bool firstRun;
 
@@ -21,9 +18,9 @@ public class IngredientManager : MonoBehaviour {
         pressed = false;
         firstRun = true;
     }
+
     void Awake()
     {
-        // Set up the reference.
         anim = GetComponent<Animator>();
     }
 
@@ -51,27 +48,5 @@ public class IngredientManager : MonoBehaviour {
         }
     }
 
-    public void ClickToClose()
-    {
-        gameObject.SetActive(false);
-
-    }
-
-    private IEnumerator doProcess(Button btn)
-    {
-        GetComponentInChildren<Button>().GetComponent<Image>().sprite = btn.GetComponent<Image>().sprite;
-        anim.SetTrigger("Ingredient");
-        yield return new WaitForSeconds(3f);
-       // gameObject.SetActive(false);
-
-
-
-    }
-
-    void Update()
-    {
-           // anim.SetTrigger("Ingredient");
-       
-    }
 }
 
