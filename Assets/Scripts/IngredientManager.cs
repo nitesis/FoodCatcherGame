@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 
 public class IngredientManager : MonoBehaviour {
-      
 
+    public Text reciepName;
     Animator anim;                          
     private bool pressed;
     private bool firstRun;
@@ -26,12 +26,15 @@ public class IngredientManager : MonoBehaviour {
 
     public void buttonPressed(Button btn)
     {
+        Color c;
         if (pressed == false)
         {
             GetComponentInChildren<Button>().GetComponent<Image>().sprite = btn.GetComponent<Image>().sprite;
             Text[] texts = GetComponentsInChildren<Text>();
             texts[1].text= btn.GetComponentInChildren<Text>().text;
-
+            c = reciepName.color;
+            c.a = 0f;
+            reciepName.color = c;
             if (firstRun)
             {
                 anim.SetTrigger("Ingredient");
@@ -45,6 +48,9 @@ public class IngredientManager : MonoBehaviour {
 
       else
         {
+            c = reciepName.color;
+            c.a = 1f;
+            reciepName.color = c;
             anim.ResetTrigger("Ingredient");
             anim.SetTrigger("IngredientOut");
             pressed = false;
