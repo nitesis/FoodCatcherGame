@@ -29,12 +29,6 @@ public class ReciepCSVReader: MonoBehaviour
         set { reciep = value; }
     }
 
-   /* void Awake()
-    {
-        // Do not destroy this game object:
-        DontDestroyOnLoad(this);
-
-    }*/
     void Start()
     {
         Load(file);
