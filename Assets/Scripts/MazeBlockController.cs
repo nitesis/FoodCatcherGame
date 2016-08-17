@@ -8,7 +8,6 @@ public class MazeBlockController : MonoBehaviour
 
     public MazeGenerator mazeGenerator;
     public float fallDelay;
-    public bool fallBlockActive;
 
     private GameObject[,] maze;
     private int[,] mazeLogic;
@@ -19,6 +18,7 @@ public class MazeBlockController : MonoBehaviour
 
     private float timeFall = 3;
     private float timeAppear = 6;
+    private bool fallBlockActive;
 
     void FixedUpdate()
     {
@@ -62,6 +62,11 @@ public class MazeBlockController : MonoBehaviour
 
     void Start()
     {
+        if (PlayerPrefs.GetFloat("gameOption") == 3)
+            fallBlockActive = true;
+        else
+            fallBlockActive = false;
+
         timeFall = fallDelay;
         timeAppear = 2 * fallDelay;
         maze = mazeGenerator.GetMaze();
