@@ -258,7 +258,7 @@ public class FoodObjectController : MonoBehaviour
       // var obj = (GameObject) Instantiate(prefab, new Vector3(position.x,0, position.y), Quaternion.identity);
         var obj = (GameObject)Instantiate(prefab);
         foodObjectList.Add(obj);
-        obj.transform.position = new Vector3(position.x, 1, position.y);
+        obj.transform.position = new Vector3(position.x, obj.transform.position.y, position.y);
         maze[position.x, position.y] = obj;
         maze[position.x, position.y].GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>(reciepList[indexReciepList]);
         maze[position.x, position.y].GetComponentInChildren<Renderer>().material.mainTexture = Resources.Load(reciepList[indexReciepList]) as Texture;
