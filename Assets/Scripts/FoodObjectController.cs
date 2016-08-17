@@ -7,7 +7,6 @@ public class FoodObjectController : MonoBehaviour
 {
     public MazeGenerator mazeGenerator;
     public GameObject spawnPrefab;
-    public bool rearrangeObjects;
     public float rearrangeDelay ;
     public string level;
     public GameObject player1;
@@ -16,6 +15,7 @@ public class FoodObjectController : MonoBehaviour
     public Text reciepText;
 
 
+    private bool rearrangeObjects;
     private GameObject[,] maze;
     private List<ObjectContainer> objects = new List<ObjectContainer>();
     private List<Position> emptyPositions;
@@ -53,6 +53,10 @@ public class FoodObjectController : MonoBehaviour
 
     void Start()
     {
+        if (PlayerPrefs.GetFloat("gameOption") >= 2)
+            rearrangeObjects = true;
+        else
+            rearrangeObjects = false;
         reciepText.GetComponent <Text>().text= PlayerPrefs.GetString("reciepDE");
         reciepList = reciepCSVReader.ReciepList;
 
@@ -131,16 +135,24 @@ public class FoodObjectController : MonoBehaviour
             }
 
             tempPos = positions[possibleIndexes[random.Next(0, possibleIndexes.Count-1)]];
+            Vector3 tempVector = new Vector3(tempPos.x, 1, tempPos.y);
 
             if (!allBusy)
             {
-                obj.transform.position = new Vector3(tempPos.x, 1, tempPos.y);
+               obj.transform.position = new Vector3(tempPos.x, 1, tempPos.y);
                
+
                 maze[tempPos.x, tempPos.y] = obj;
                 if (obj == fleeObject1)
                     posFleeObject1 = tempPos;
                 else
                     posFleeObject2 = tempPos;
+               /* iTween.MoveTo(obj, iTween.Hash(
+                    "position", tempVector,
+                    "speed", 20,
+                    "oncomplete", "onCompleteFromiTween",
+                    "easetype", iTween.EaseType.linear
+                    ));*/
             }
         }        
     }
