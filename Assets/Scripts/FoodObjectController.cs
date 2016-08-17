@@ -16,6 +16,7 @@ public class FoodObjectController : MonoBehaviour
 
 
     private bool rearrangeObjects;
+    private bool fleeObjectActive;
     private GameObject[,] maze;
     private List<ObjectContainer> objects = new List<ObjectContainer>();
     private List<Position> emptyPositions;
@@ -85,21 +86,6 @@ public class FoodObjectController : MonoBehaviour
 
     void Update()
     {
-
-        if (Input.GetKey("up"))
-        {
-            if (rearrangeDelay > 0)
-            {
-                rearrangeDelay = rearrangeDelay - 0.1f;
-            }
-        }
-
-        if (Input.GetKey("down"))
-        {
-                rearrangeDelay = rearrangeDelay +0.1f;
-        }
-
-
         if (fleeObject1!=null)
             moveFleeObject(fleeObject1, posFleeObject1);
 
