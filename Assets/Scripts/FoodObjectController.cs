@@ -54,10 +54,7 @@ public class FoodObjectController : MonoBehaviour
 
     void Start()
     {
-        if (PlayerPrefs.GetFloat("gameOption") >= 2)
-            rearrangeObjects = true;
-        else
-            rearrangeObjects = false;
+        
         reciepText.GetComponent <Text>().text= PlayerPrefs.GetString("reciepDE");
         reciepList = reciepCSVReader.ReciepList;
 
@@ -69,13 +66,40 @@ public class FoodObjectController : MonoBehaviour
         emptyPositions = currentEmptyTiles;
 
         // Create Fleeing Objects
-        posFleeObject1 = RandomPosFleeObject();
-        posFleeObject2 = RandomPosFleeObject();
-        fleeObject1 = PlaceFleeObject(posFleeObject1);
-        fleeObject2 = PlaceFleeObject(posFleeObject2);
+        if (PlayerPrefs.GetFloat("gameOption") >= 1)
+            fleeObjectActive = true;
+        else
+            fleeObjectActive = false;
+
+        if (fleeObjectActive)
+        {
+            posFleeObject1 = RandomPosFleeObject();
+            posFleeObject2 = RandomPosFleeObject();
+            fleeObject1 = PlaceFleeObject(posFleeObject1);
+            fleeObject2 = PlaceFleeObject(posFleeObject2);
+        }
+        else
+        {
+            fleeObject1 = null;
+            fleeObject2 = null;
+        }
 
         // Create hiding and appearing Objects
-        var maxObjects = System.Math.Min(emptyPositions.Count, prefabCount - 2);
+
+       
+            if (PlayerPrefs.GetFloat("gameOption") >= 2)
+            rearrangeObjects = true;
+            else
+            rearrangeObjects = false;
+
+        int maxObjects;
+
+        if (fleeObjectActive)
+            maxObjects = System.Math.Min(emptyPositions.Count, prefabCount - 2);
+        else
+            maxObjects = System.Math.Min(emptyPositions.Count, prefabCount);
+
+
         for (int i = 0; i < maxObjects; i++) { 
             spawnRandom(spawnPrefab);
     }
