@@ -144,12 +144,11 @@ public class FoodObjectController : MonoBehaviour
                 listIndex++;
             }
 
-            tempPos = positions[possibleIndexes[random.Next(0, possibleIndexes.Count-1)]];
-            Vector3 tempVector = new Vector3(tempPos.x, 1, tempPos.y);
-
             if (!allBusy)
             {
-               obj.transform.position = new Vector3(tempPos.x, 1, tempPos.y);
+                tempPos = positions[possibleIndexes[random.Next(0, possibleIndexes.Count - 1)]];
+                Vector3 tempVector = new Vector3(tempPos.x, 1, tempPos.y);
+                obj.transform.position = new Vector3(tempPos.x, obj.transform.position.y, tempPos.y);
                
 
                 maze[tempPos.x, tempPos.y] = obj;
