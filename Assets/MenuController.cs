@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour {
 
@@ -256,4 +257,9 @@ public class MenuController : MonoBehaviour {
 		Scene mazeScene = SceneManager.GetSceneByName (sceneName);
 		SceneManager.SetActiveScene(mazeScene);
 	}
+
+    public void GameOptions(Slider slider)
+    {
+        PlayerPrefs.SetFloat("gameOption", slider.value);
+    }
 }

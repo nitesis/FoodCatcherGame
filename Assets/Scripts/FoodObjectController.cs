@@ -7,7 +7,6 @@ public class FoodObjectController : MonoBehaviour
 {
     public MazeGenerator mazeGenerator;
     public GameObject spawnPrefab;
-    public bool rearrangeObjects;
     public float rearrangeDelay ;
     public string level;
     public GameObject player1;
@@ -16,6 +15,8 @@ public class FoodObjectController : MonoBehaviour
     public Text reciepText;
 
 
+    private bool rearrangeObjects;
+    private bool fleeObjectActive;
     private GameObject[,] maze;
     private List<ObjectContainer> objects = new List<ObjectContainer>();
     private List<Position> emptyPositions;
@@ -53,6 +54,7 @@ public class FoodObjectController : MonoBehaviour
 
     void Start()
     {
+        
         reciepText.GetComponent <Text>().text= PlayerPrefs.GetString("reciepDE");
         reciepList = reciepCSVReader.ReciepList;
 
@@ -64,13 +66,40 @@ public class FoodObjectController : MonoBehaviour
         emptyPositions = currentEmptyTiles;
 
         // Create Fleeing Objects
-        posFleeObject1 = RandomPosFleeObject();
-        posFleeObject2 = RandomPosFleeObject();
-        fleeObject1 = PlaceFleeObject(posFleeObject1);
-        fleeObject2 = PlaceFleeObject(posFleeObject2);
+        if (PlayerPrefs.GetFloat("gameOption") >= 1)
+            fleeObjectActive = true;
+        else
+            fleeObjectActive = false;
+
+        if (fleeObjectActive)
+        {
+            posFleeObject1 = RandomPosFleeObject();
+            posFleeObject2 = RandomPosFleeObject();
+            fleeObject1 = PlaceFleeObject(posFleeObject1);
+            fleeObject2 = PlaceFleeObject(posFleeObject2);
+        }
+        else
+        {
+            fleeObject1 = null;
+            fleeObject2 = null;
+        }
 
         // Create hiding and appearing Objects
-        var maxObjects = System.Math.Min(emptyPositions.Count, prefabCount - 2);
+
+       
+            if (PlayerPrefs.GetFloat("gameOption") >= 2)
+            rearrangeObjects = true;
+            else
+            rearrangeObjects = false;
+
+        int maxObjects;
+
+        if (fleeObjectActive)
+            maxObjects = System.Math.Min(emptyPositions.Count, prefabCount - 2);
+        else
+            maxObjects = System.Math.Min(emptyPositions.Count, prefabCount);
+
+
         for (int i = 0; i < maxObjects; i++) { 
             spawnRandom(spawnPrefab);
     }
@@ -81,21 +110,6 @@ public class FoodObjectController : MonoBehaviour
 
     void Update()
     {
-
-        if (Input.GetKey("up"))
-        {
-            if (rearrangeDelay > 0)
-            {
-                rearrangeDelay = rearrangeDelay - 0.1f;
-            }
-        }
-
-        if (Input.GetKey("down"))
-        {
-                rearrangeDelay = rearrangeDelay +0.1f;
-        }
-
-
         if (fleeObject1!=null)
             moveFleeObject(fleeObject1, posFleeObject1);
 
@@ -130,17 +144,24 @@ public class FoodObjectController : MonoBehaviour
                 listIndex++;
             }
 
-            tempPos = positions[possibleIndexes[random.Next(0, possibleIndexes.Count-1)]];
-
             if (!allBusy)
             {
-                obj.transform.position = new Vector3(tempPos.x, 1, tempPos.y);
+                tempPos = positions[possibleIndexes[random.Next(0, possibleIndexes.Count - 1)]];
+                Vector3 tempVector = new Vector3(tempPos.x, 1, tempPos.y);
+                obj.transform.position = new Vector3(tempPos.x, obj.transform.position.y, tempPos.y);
                
+
                 maze[tempPos.x, tempPos.y] = obj;
                 if (obj == fleeObject1)
                     posFleeObject1 = tempPos;
                 else
                     posFleeObject2 = tempPos;
+               /* iTween.MoveTo(obj, iTween.Hash(
+                    "position", tempVector,
+                    "speed", 20,
+                    "oncomplete", "onCompleteFromiTween",
+                    "easetype", iTween.EaseType.linear
+                    ));*/
             }
         }        
     }
@@ -246,7 +267,7 @@ public class FoodObjectController : MonoBehaviour
       // var obj = (GameObject) Instantiate(prefab, new Vector3(position.x,0, position.y), Quaternion.identity);
         var obj = (GameObject)Instantiate(prefab);
         foodObjectList.Add(obj);
-        obj.transform.position = new Vector3(position.x, 1, position.y);
+        obj.transform.position = new Vector3(position.x, obj.transform.position.y, position.y);
         maze[position.x, position.y] = obj;
         maze[position.x, position.y].GetComponentInChildren<SpriteRenderer>().sprite = Resources.Load<Sprite>(reciepList[indexReciepList]);
         maze[position.x, position.y].GetComponentInChildren<Renderer>().material.mainTexture = Resources.Load(reciepList[indexReciepList]) as Texture;
