@@ -134,8 +134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 30920693}
-  ZNumber: 5.3
-  XNumber: 14
+  ZNumber: 6.1
+  XNumber: 13
 --- !u!114 &30920692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,7 +967,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
   fallDelay: 5
-  fallBlockActive: 1
 --- !u!114 &316012590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,7 +980,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
   spawnPrefab: {fileID: 117536, guid: b32e356fcfa7bfe40b73b05a0f783de1, type: 2}
-  rearrangeObjects: 1
   rearrangeDelay: 3
   level: medium
   player1: {fileID: 606865696}
@@ -1532,8 +1530,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 462244225}
-  ZNumber: 3.3
-  XNumber: 14
+  ZNumber: 4.1
+  XNumber: 13
 --- !u!114 &462244224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2258,8 +2256,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 622135042}
-  ZNumber: 4.3
-  XNumber: 14
+  ZNumber: 5.1
+  XNumber: 13
 --- !u!114 &622135041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2930,8 +2928,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 952617587}
-  ZNumber: -0.9
-  XNumber: 14
+  ZNumber: 0
+  XNumber: 13
 --- !u!114 &952617586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3343,6 +3341,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 2}
   m_IsPrefabParent: 0
@@ -3737,6 +3739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodObjectController: {fileID: 316012590}
+  reciepText: {fileID: 1953186165}
   restartDelay: 5
 --- !u!1 &1202285373
 GameObject:
@@ -3787,8 +3790,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1202285377}
-  ZNumber: 1.3
-  XNumber: 14
+  ZNumber: 2.1
+  XNumber: 13
 --- !u!114 &1202285376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4370,8 +4373,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1352063269}
-  ZNumber: 7.3
-  XNumber: 14
+  ZNumber: 8.1
+  XNumber: 13
 --- !u!114 &1352063268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4725,8 +4728,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1547960417}
-  ZNumber: 6.4
-  XNumber: 14
+  ZNumber: 7.1
+  XNumber: 13
 --- !u!114 &1547960416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5701,8 +5704,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1712494847}
-  ZNumber: 2.3
-  XNumber: 14
+  ZNumber: 3.1
+  XNumber: 13
 --- !u!114 &1712494846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7148,8 +7151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 2133294786}
-  ZNumber: 0.3
-  XNumber: 14
+  ZNumber: 1
+  XNumber: 13
 --- !u!114 &2133294785
 MonoBehaviour:
   m_ObjectHideFlags: 0

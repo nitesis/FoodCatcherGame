@@ -25,8 +25,6 @@ public class SphereController : MonoBehaviour {
     }
 
 
-
-
     void Start(){
 		particleSystem = gameObject.GetComponent<ParticleSystem> ();
 		rb = GetComponent<Rigidbody>();
@@ -64,24 +62,14 @@ public class SphereController : MonoBehaviour {
             // place colored images on food board
             Texture texture = other.GetComponentInChildren<Renderer>().material.mainTexture;
             GameObject foodboard = GameObject.Find("Canvas_FoodBoard");
-            /*Image[] images;
-            images = foodboard.GetComponentInChildren<Image>().GetComponentsInChildren<Image>();
-            for (int i = 0; i < images.Length; i++)
-                if (texture.name + "_sw" == images[i].name)
-                {
-                    StartCoroutine(moveAndeChange(other, images[i]));
-                }
-                */
             Button[] buttons = foodboard.GetComponentInChildren<Image>().GetComponentsInChildren<Button>();
             for (int i = 0; i < buttons.Length; i++)
                 if (texture.name + "_big_sw" == buttons[i].GetComponent<Image>().sprite.name)
                 {
                     StartCoroutine(moveAndeChange(other, buttons[i]));
                 }
-
-            particleSystem.Play();
             collectSound.GetComponent<AudioSource>().Play();
-
+            particleSystem.Play();
 
          }
 
@@ -91,6 +79,8 @@ public class SphereController : MonoBehaviour {
 
     private IEnumerator moveAndeChange(Collider other, Button btn)
     {
+
+        other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, 2, other.gameObject.transform.position.z);
         iTween.RotateTo(other.gameObject, new Vector3(90,180,0),5);
         yield return new WaitForSeconds(0.2f);
         Vector3 target = new Vector3(btn.GetComponentInChildren<ChangeSprite>().XNumber, 8, btn.GetComponentInChildren<ChangeSprite>().ZNumber);
@@ -107,16 +97,6 @@ public class SphereController : MonoBehaviour {
         landingSound.GetComponent<AudioSource>().Play();
         if (!(gameObject == null && !ReferenceEquals(gameObject, null)))
             Destroy(other.gameObject);
-       
-
-        //foodObjectController.FoodItemCount--;
-
-
-        // yield return new WaitForSeconds(1f);
-        //foodObjectController.FoodItemCount--;
-
-
     }
-
 
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

@@ -156,12 +156,6 @@ public class FoodObjectController : MonoBehaviour
                     posFleeObject1 = tempPos;
                 else
                     posFleeObject2 = tempPos;
-               /* iTween.MoveTo(obj, iTween.Hash(
-                    "position", tempVector,
-                    "speed", 20,
-                    "oncomplete", "onCompleteFromiTween",
-                    "easetype", iTween.EaseType.linear
-                    ));*/
             }
         }        
     }
@@ -264,7 +258,6 @@ public class FoodObjectController : MonoBehaviour
 
     private ObjectContainer spawnObj(GameObject prefab, Position position)
     {
-      // var obj = (GameObject) Instantiate(prefab, new Vector3(position.x,0, position.y), Quaternion.identity);
         var obj = (GameObject)Instantiate(prefab);
         foodObjectList.Add(obj);
         obj.transform.position = new Vector3(position.x, obj.transform.position.y, position.y);
