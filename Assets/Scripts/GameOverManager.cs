@@ -34,8 +34,7 @@ public class GameOverManager : MonoBehaviour {
 		LoadSpritesInGameOverScreen ();
     }
 
-		
-	// Update is called once per frame
+
 	void Update () 
 	{
         if ((foodObjectController.FoodObjectList.Count==0)&& (sphereCollided==true))

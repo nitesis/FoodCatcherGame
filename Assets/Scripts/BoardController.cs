@@ -22,9 +22,6 @@ public class BoardController : MonoBehaviour {
             buttons[j+1].GetComponent<Image>().sprite = Resources.Load<Sprite>(reciepCSVReader.ReciepList[i]+"_big_sw");
             buttons[j].GetComponentInChildren<Text>().text = ingredientsCSVReader.Find_NameEn(reciepCSVReader.ReciepList[i]).NameDe.ToString();
             buttons[j+1].GetComponentInChildren<Text>().text = ingredientsCSVReader.Find_NameEn(reciepCSVReader.ReciepList[i]).NameDe.ToString();
-
-            // buttons[j].GetComponentInChildren<Text>().text = reciepCSVReader.ReciepList[i];
-            // buttons[j+1].GetComponentInChildren<Text>().text = reciepCSVReader.ReciepList[i];
             i++;
             j += 2;
         }
