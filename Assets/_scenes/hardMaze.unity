@@ -4466,6 +4466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodObjectController: {fileID: 316012589}
+  reciepText: {fileID: 73606551}
   restartDelay: 5
 --- !u!95 &1152003603
 Animator:
@@ -4750,6 +4751,10 @@ Prefab:
       propertyPath: foodObjectController
       value: 
       objectReference: {fileID: 316012589}
+    - target: {fileID: 11407844, guid: b0137f5a68f77194c90328c9a204d73e, type: 2}
+      propertyPath: reciepText
+      value: 
+      objectReference: {fileID: 73606551}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b0137f5a68f77194c90328c9a204d73e, type: 2}
   m_IsPrefabParent: 0

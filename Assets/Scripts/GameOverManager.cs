@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameOverManager : MonoBehaviour {
 
 	public FoodObjectController foodObjectController;
+    public Text reciepText;
 	public float restartDelay = 8f;
 
     private bool sphereCollided;
@@ -44,6 +45,10 @@ public class GameOverManager : MonoBehaviour {
             if (restartTimer >= restartDelay)
             {
                 anim.SetTrigger("GameOver");
+                Color c;
+                c = reciepText.color;
+                c.a = 0f;
+                reciepText.color = c;
             }
 
 			restartTimer += Time.deltaTime;

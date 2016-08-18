@@ -5478,6 +5478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodObjectController: {fileID: 316012590}
+  reciepText: {fileID: 33938468}
   restartDelay: 5
 --- !u!95 &1590014344
 Animator:
