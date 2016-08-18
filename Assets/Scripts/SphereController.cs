@@ -78,10 +78,8 @@ public class SphereController : MonoBehaviour {
                 {
                     StartCoroutine(moveAndeChange(other, buttons[i]));
                 }
-
-            particleSystem.Play();
             collectSound.GetComponent<AudioSource>().Play();
-
+            particleSystem.Play();
 
          }
 
@@ -91,6 +89,8 @@ public class SphereController : MonoBehaviour {
 
     private IEnumerator moveAndeChange(Collider other, Button btn)
     {
+
+        other.gameObject.transform.position = new Vector3(other.gameObject.transform.position.x, 2, other.gameObject.transform.position.z);
         iTween.RotateTo(other.gameObject, new Vector3(90,180,0),5);
         yield return new WaitForSeconds(0.2f);
         Vector3 target = new Vector3(btn.GetComponentInChildren<ChangeSprite>().XNumber, 8, btn.GetComponentInChildren<ChangeSprite>().ZNumber);
