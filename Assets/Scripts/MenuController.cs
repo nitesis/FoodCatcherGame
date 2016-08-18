@@ -176,12 +176,22 @@ public class MenuController : MonoBehaviour {
 		PlayerPrefs.SetString("reciepDE", "Lauchquiche");
 		LoadScene("hardMaze");
 	}
-	private void LoadScene(string sceneName) {
+
+    public void HardMazeLachscanape()
+    {
+        PlayerPrefs.SetString("ChoosedReciep", "lachscanape");
+        PlayerPrefs.SetInt("IngredientsCount",10);
+        PlayerPrefs.SetString("reciepDE", "Lachscanapé");
+        LoadScene("hardMaze");
+    }
+
+    private void LoadScene(string sceneName) {
 		SceneManager.LoadScene (sceneName);
 		Debug.Log ("Loading " + sceneName);
 		Scene mazeScene = SceneManager.GetSceneByName (sceneName);
 		SceneManager.SetActiveScene(mazeScene);
 	}
+
 
     public void GameOptions(Slider slider)
     {

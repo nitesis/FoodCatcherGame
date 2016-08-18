@@ -160,7 +160,7 @@ GameObject:
   - 95: {fileID: 110187628}
   - 114: {fileID: 110187627}
   m_Layer: 5
-  m_Name: Recipe09
+  m_Name: Lachscanape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,8 +252,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: MediumMazeZuerchergeschnetzeltes
+      - m_Target: {fileID: 1805794325}
+        m_MethodName: HardMazeLachscanape
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -583,7 +583,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Recipe09
+  m_Text: Lachscanape
 --- !u!222 &347252828
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -643,7 +643,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 793ada38c6e9e4ae8b0180677468dd0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da126e0ff35752d47a3ac67c371e36ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
