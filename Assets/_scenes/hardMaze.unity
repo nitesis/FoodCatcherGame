@@ -238,8 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 139288896}
-  ZNumber: 6.8
-  XNumber: 14.5
+  ZNumber: 8
+  XNumber: 18
 --- !u!114 &139288895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,8 +374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 207244557}
-  ZNumber: 0.5
-  XNumber: 14.5
+  ZNumber: 0
+  XNumber: 18
 --- !u!114 &207244556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,8 +510,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 216461783}
-  ZNumber: 8.6
-  XNumber: 14.5
+  ZNumber: 10.2
+  XNumber: 18
 --- !u!114 &216461782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1328,8 +1328,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 315781894}
-  ZNumber: 1.4
-  XNumber: 14.5
+  ZNumber: 1.1
+  XNumber: 18
 --- !u!114 &315781893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1474,7 +1474,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
   spawnPrefab: {fileID: 117536, guid: b32e356fcfa7bfe40b73b05a0f783de1, type: 2}
-  rearrangeObjects: 1
   rearrangeDelay: 0.7
   level: hard
   player1: {fileID: 867876945}
@@ -1494,7 +1493,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
   fallDelay: 2
-  fallBlockActive: 1
 --- !u!114 &316012591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2441,8 +2439,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 678344268}
-  ZNumber: 5.9
-  XNumber: 14.5
+  ZNumber: 6.8
+  XNumber: 18
 --- !u!114 &678344267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3287,8 +3285,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 977383708}
-  ZNumber: 3.2
-  XNumber: 14.5
+  ZNumber: 3.4
+  XNumber: 18
 --- !u!114 &977383707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3565,6 +3563,81 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &1059007191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1059007195}
+  - 33: {fileID: 1059007194}
+  - 65: {fileID: 1059007193}
+  - 23: {fileID: 1059007192}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &1059007192
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1059007191}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &1059007193
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1059007191}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1059007194
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1059007191}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1059007195
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1059007191}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17, y: 1, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
 --- !u!1 &1079598333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3874,8 +3947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1094141810}
-  ZNumber: 9.6
-  XNumber: 14.5
+  ZNumber: 11.4
+  XNumber: 18
 --- !u!114 &1094141809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4349,7 +4422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1140878069}
   ZNumber: 2.3
-  XNumber: 14.5
+  XNumber: 18
 --- !u!114 &1140878068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5311,8 +5384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1303256856}
-  ZNumber: 5
-  XNumber: 14.5
+  ZNumber: 5.6
+  XNumber: 18
 --- !u!114 &1303256855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5447,8 +5520,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1308540010}
-  ZNumber: 7.7
-  XNumber: 14.5
+  ZNumber: 9.1
+  XNumber: 18
 --- !u!114 &1308540009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5803,8 +5876,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bwImg: {fileID: 1387388243}
-  ZNumber: 4.1
-  XNumber: 14.5
+  ZNumber: 4.5
+  XNumber: 18
 --- !u!114 &1387388242
 MonoBehaviour:
   m_ObjectHideFlags: 0
