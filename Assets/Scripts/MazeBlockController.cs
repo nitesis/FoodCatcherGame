@@ -22,21 +22,6 @@ public class MazeBlockController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey("y"))
-        {
-            if (fallBlockActive == false) { 
-            fallBlockActive = true;
-            fallPossibleBlocks = FallPossibleBlocks();
-        }
-        }
-
-        if (Input.GetKey("n"))
-        {
-            fallBlockActive = false;
-        }
-
-        
-
             if (Time.timeSinceLevelLoad > timeFall)
             {
             var position = randomBlockPosition();

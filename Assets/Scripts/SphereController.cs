@@ -107,15 +107,6 @@ public class SphereController : MonoBehaviour {
         landingSound.GetComponent<AudioSource>().Play();
         if (!(gameObject == null && !ReferenceEquals(gameObject, null)))
             Destroy(other.gameObject);
-       
-
-        //foodObjectController.FoodItemCount--;
-
-
-        // yield return new WaitForSeconds(1f);
-        //foodObjectController.FoodItemCount--;
-
-
     }
 
 
