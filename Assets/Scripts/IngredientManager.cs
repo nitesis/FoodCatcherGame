@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 public class IngredientManager : MonoBehaviour {
 
     public Text reciepName;
-    public GameObject soundIn;
-    public GameObject soundOut;
     Animator anim;                          
     private bool pressed;
     private bool firstRun;
@@ -54,14 +52,12 @@ public class IngredientManager : MonoBehaviour {
 
                 reciepName.color = c;
                  }
-            soundIn.GetComponent<AudioSource>().Play();
             pressed = true;
 
         }
         else
         {
             anim.ResetTrigger("Ingredient");
-            soundOut.GetComponent<AudioSource>().Play();
             anim.SetTrigger("IngredientOut");
             pressed = false;
             yield return new WaitForSeconds(0.6f);
