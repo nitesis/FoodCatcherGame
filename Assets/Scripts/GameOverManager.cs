@@ -55,7 +55,8 @@ public class GameOverManager : MonoBehaviour {
 		    }
 			if (restartTimer >= 4*restartDelay) 
 		    {
-			SceneManager.LoadScene ("menu");
+            PlayerPrefs.SetFloat("gameOption", 1f);
+            SceneManager.LoadScene ("menu");
 		    }
 	}
 
