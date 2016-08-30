@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour {
 
 	public void ExitGame() {
+        PlayerPrefs.SetFloat("gameOption", 1f);
 		Application.Quit ();
 	}
 	public void MainMenu() {
-		LoadScene ("menu");
+        PlayerPrefs.SetFloat("gameOption", 1f);
+        LoadScene("menu");
 	}
 
 	public void MenuRecipeEasy() {

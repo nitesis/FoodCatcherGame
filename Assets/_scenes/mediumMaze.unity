@@ -966,7 +966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
-  fallDelay: 5
+  fallDelay: 1.7
 --- !u!114 &316012590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,7 +980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazeGenerator: {fileID: 316012587}
   spawnPrefab: {fileID: 117536, guid: b32e356fcfa7bfe40b73b05a0f783de1, type: 2}
-  rearrangeDelay: 3
+  rearrangeDelay: 1.8
   level: medium
   player1: {fileID: 606865696}
   player2: {fileID: 467107173}
@@ -5170,6 +5170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reciepName: {fileID: 1953186165}
+  soundIn: {fileID: 0}
+  soundOut: {fileID: 0}
 --- !u!95 &1638235822
 Animator:
   serializedVersion: 3
